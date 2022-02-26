@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    margin: 0;
+}
+
+nav a {
+    margin-inline: 10px;
+}
