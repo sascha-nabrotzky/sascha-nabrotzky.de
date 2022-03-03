@@ -7,6 +7,8 @@
   --margin-200: 3rem;
   --margin-300: 4rem;
   --margin-400: 5rem;
+
+  --max-width: 50rem;
 }
 
 .mt-2 {
@@ -36,8 +38,6 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
   font-family: "Courier New", Courier, monospace;
   min-height: 100vh;
   margin: 0;
@@ -45,7 +45,11 @@ body {
   color: var(--clr-white);
 }
 
-nav a {
-  margin-inline: 10px;
-  color: var(--clr-green);
+.btn-plumi {
+  background-color: transparent;
+  color: var(--clr-white);
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--clr-white);
+  margin: 1rem;
 }
