@@ -38,9 +38,10 @@
 body {
   display: flex;
   justify-content: center;
-  font-family: "Courier New", Courier, monospace;
-  min-height: 100vh;
   margin: 0;
+  padding-inline: 1rem;
+  min-height: 100vh;
+  font-family: "Courier New", Courier, monospace;
   background-color: var(--clr-black);
   color: var(--clr-white);
 }

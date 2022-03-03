@@ -31,9 +31,10 @@ header {
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: var(--max-width);
   position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
   padding-top: 2rem;
 }
 
@@ -44,7 +45,7 @@ nav a {
 
 main {
   margin-top: 15rem;
-  width: var(--max-width);
+  max-width: var(--max-width);
   text-align: center;
 }
 </style>
