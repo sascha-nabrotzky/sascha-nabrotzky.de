@@ -12,40 +12,50 @@ import { RouterLink, RouterView } from "vue-router";
       height="125"
     />
 
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/javascript">JavaScript</RouterLink>
-      </nav>
-    </div>
+    <nav class="mt-05 mb-2">
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+      <RouterLink to="/javascript">JavaScript</RouterLink>
+    </nav>
   </header>
 
   <RouterView />
+
+  <footer class="mt-1">
+    <nav>
+      <a href="#">Sociallink1</a>
+      <a href="#">Sociallink2</a>
+      <a href="#">Sociallink3</a>
+    </nav>
+  </footer>
 </template>
 
 <style>
 @import "@/assets/main.css";
 
-header {
+header,
+footer {
   display: flex;
-  flex-flow: column;
   align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  padding-top: 2rem;
+  padding: 1rem;
+}
+
+header {
+  flex-flow: column;
+}
+
+footer {
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
 }
 
 nav a {
   margin-inline: 10px;
   color: var(--clr-green);
-}
-
-main {
-  margin-top: 15rem;
-  max-width: var(--max-width);
-  text-align: center;
 }
 </style>

@@ -27,3 +27,20 @@ function decrement() {
   <button @click="increment" class="btn-plumi">+</button>
   <h2 v-if="seen">v-if ist auf true</h2>
 </template>
+
+<style>
+.number {
+  font-size: 4rem;
+  color: var(--clr-green);
+}
+
+.btn-plumi {
+  background-color: transparent;
+  color: var(--clr-white);
+  width: 2rem;
+  aspect-ratio: 1;
+  border: 1px solid var(--clr-white);
+  margin: 1rem;
+  cursor: pointer;
+}
+</style>
