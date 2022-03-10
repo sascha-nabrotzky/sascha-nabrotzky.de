@@ -1,3 +1,47 @@
+/* merriweather-regular - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/merriweather-v28-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/merriweather-v28-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather-regular - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/merriweather-v28-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/merriweather-v28-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather-700 - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/merriweather-v28-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/merriweather-v28-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* merriweather-sans-300 - latin */
+@font-face {
+  font-family: "Merriweather Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url("../fonts/merriweather-sans-v20-latin-300.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/merriweather-sans-v20-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 :root {
   --clr-white: #e6e6e6;
   --clr-black: #0a0a0a;
@@ -13,6 +57,13 @@
   --max-width: 50rem;
 
   --container-gap: 3rem;
+
+  --ff-serif: "Merriweather";
+  --ff-sans: "Merriweather Sans";
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
 }
 
 .mt-05 {
@@ -51,7 +102,11 @@ body {
   display: grid;
   margin: 0;
   min-height: 100vh;
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--ff-sans);
+  font-weight: var(--fw-light);
+  line-height: 1.5;
+  font-size: 18px;
+  letter-spacing: 0.07rem;
   background-color: var(--clr-black);
   color: var(--clr-white);
 }
@@ -59,6 +114,41 @@ body {
 #app {
   display: grid;
   grid-template-rows: min-content 1fr;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-serif);
+}
+
+header,
+footer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+header {
+  flex-flow: column;
+}
+
+footer {
+  justify-content: center;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}
+
+nav a {
+  margin-inline: 10px;
+  color: var(--clr-green);
 }
 
 main {
@@ -86,5 +176,14 @@ main {
 
   main > *:last-child:not(.image-right) {
     grid-column: 3;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: var(--clr-white);
+    border: 1px solid var(--clr-white);
+    margin: 1rem;
+    cursor: pointer;
   }
 }

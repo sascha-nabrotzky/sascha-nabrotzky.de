@@ -23,7 +23,7 @@ import { RouterLink, RouterView } from "vue-router";
 
   <footer class="mt-1">
     <nav>
-      <a href="#">Sociallink1</a>
+      <a href="https://sascha-nabrotzky.github.io" target="_blank">Porfolio</a>
       <a href="#">Sociallink2</a>
       <a href="#">Sociallink3</a>
     </nav>
@@ -32,30 +32,4 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style>
 @import "@/assets/main.css";
-
-header,
-footer {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-}
-
-header {
-  flex-flow: column;
-}
-
-footer {
-  justify-content: center;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 0.5rem;
-}
-
-nav a {
-  margin-inline: 10px;
-  color: var(--clr-green);
-}
 </style>

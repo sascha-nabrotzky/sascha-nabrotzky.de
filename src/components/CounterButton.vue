@@ -22,25 +22,31 @@ function decrement() {
 </script>
 
 <template>
-  <h2 class="number">{{ count }}</h2>
-  <button @click="decrement" class="btn-plumi">-</button>
-  <button @click="increment" class="btn-plumi">+</button>
-  <h2 v-if="seen">v-if ist auf true</h2>
+  <section>
+    <h2 class="number">{{ count }}</h2>
+    <div>
+      <button @click="decrement" class="btn btn-plumi">-</button>
+      <button @click="increment" class="btn btn-plumi">+</button>
+    </div>
+    <h2 v-if="seen">v-if ist auf true</h2>
+  </section>
 </template>
 
-<style>
+<style scoped>
+section {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+}
 .number {
   font-size: 4rem;
   color: var(--clr-green);
 }
 
 .btn-plumi {
-  background-color: transparent;
-  color: var(--clr-white);
   width: 2rem;
   aspect-ratio: 1;
-  border: 1px solid var(--clr-white);
-  margin: 1rem;
-  cursor: pointer;
+  padding: unset;
 }
 </style>
