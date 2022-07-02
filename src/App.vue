@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import Navigation from "./components/Navigation.vue";
 </script>
 
 <template>
@@ -11,15 +11,8 @@ import { RouterLink, RouterView } from "vue-router";
       width="125"
       height="125"
     />
-
-    <nav class="mt-05 mb-2">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/javascript">JavaScript</RouterLink>
-    </nav>
+    <Navigation />
   </header>
-
-  <RouterView />
 
   <footer class="mt-1">
     <nav>

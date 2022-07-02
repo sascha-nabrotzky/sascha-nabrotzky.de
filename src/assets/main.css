@@ -141,17 +141,6 @@ footer {
   justify-content: center;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 0.5rem;
-}
-
-nav a {
-  margin-inline: 10px;
-  color: var(--clr-green);
-}
-
 main {
   display: grid;
   row-gap: var(--container-gap, 2rem);
