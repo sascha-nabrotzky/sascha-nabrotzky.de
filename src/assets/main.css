@@ -45,6 +45,7 @@
 :root {
   --clr-white: #e6e6e6;
   --clr-black: #0a0a0a;
+  --clr-dgray: #1c1c1c;
   --clr-green: #42b883;
   --clr-gray: #35495e;
 
@@ -107,7 +108,7 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: 0.07rem;
-  background-color: var(--clr-black);
+  background-color: var(--clr-dgray);
   color: var(--clr-white);
 }
 
@@ -156,6 +157,10 @@ main {
   row-gap: var(--container-gap, 2rem);
 }
 
+strong {
+  font-weight: var(--fw-bold);
+}
+
 @media screen and (max-width: 768px) {
   main {
     padding-inline: 1rem;
@@ -168,13 +173,21 @@ main {
     grid-template-columns:
       minmax(2rem, 1fr) repeat(2, minmax(0, 30rem))
       minmax(2rem, 1fr);
+    grid-template-rows: min-content 1fr;
   }
 
-  main > *:first-child {
-    grid-column: 2;
+  main > h1 {
+    grid-row: 1;
+    grid-column: 2 / 4;
   }
 
-  main > *:last-child:not(.image-right) {
+  main > div:first-of-type {
+    grid-row: 2;
+    grid-column: 2 / 3;
+  }
+
+  main > div:last-of-type:not(.image-right) {
+    grid-row: 2;
     grid-column: 3;
   }
 

@@ -5,8 +5,8 @@ import TextNormal from "../components/TextNormal.vue";
 
 <template>
   <main>
+    <h1>Home</h1>
     <div>
-      <h1>Home</h1>
       <TextNormal>
         <template #subtitle>Testseite für JavaScript und Vue</template>
         <template #text

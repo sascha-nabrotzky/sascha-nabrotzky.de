@@ -1,7 +1,7 @@
 <template>
   <main>
+    <h1>This is an about page</h1>
     <div class="about">
-      <h1>This is an about page</h1>
       <p>
         <strong>With a random Photo </strong>Lorem ipsum dolor sit amet,
         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut

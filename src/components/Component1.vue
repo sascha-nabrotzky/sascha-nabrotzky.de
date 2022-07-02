@@ -2,8 +2,8 @@
 
 <template>
   <div>
-    <section><strong>Test-Komponente 1</strong></section>
-    <h2>Hier entsteht eine neue Website von Sascha Nabrotzky</h2>
+    <p><strong>Diese Komponente steht für sich</strong></p>
+    <h3>Hier entsteht eine neue Website von Sascha Nabrotzky</h3>
     <p>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam

@@ -6,8 +6,8 @@ import Frogger from "../components/Frogger.vue";
 
 <template>
   <main>
+    <h1>JavaScript Stuff</h1>
     <div class="javascript">
-      <h1>JavaScript Stuff</h1>
       <Frogger />
       <CounterButton />
     </div>
