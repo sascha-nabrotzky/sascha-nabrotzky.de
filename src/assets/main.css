@@ -150,6 +150,10 @@ strong {
   font-weight: var(--fw-bold);
 }
 
+.image-right img {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   main {
     padding-inline: 1rem;
@@ -181,9 +185,5 @@ strong {
     grid-column: 3 / 5;
     /* max-height: 500px;
     overflow: hidden; */
-  }
-
-  .image-right img {
-    width: 100%;
   }
 }
