@@ -1,27 +1,25 @@
 <script setup>
-import Component1 from "../components/Component1.vue";
 import TextNormal from "../components/TextNormal.vue";
+import BaerBuch from "@/images/BaerAbenteuerBuch.jpg";
 </script>
 
 <template>
   <main>
-    <h1>Home</h1>
-    <div>
-      <TextNormal>
-        <template #subtitle>Testseite für JavaScript und Vue</template>
-        <template #text
-          >Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet.</template
-        >
-      </TextNormal>
+    <h1>Illustrationen und Charakter-Design</h1>
+    <TextNormal>
+      <template #subtitle>Hallo!</template>
+      <template #text>
+        Neben meinem Hauptjob als Web-Entwickler habe ich noch eine weitere
+        Leidenschaft und zwar Charakter-Design und Illustration, welches ich als
+        Hobby betreibe, wenn ich etwas Zeit freischaffen kann oder um den Kopf
+        frei zu bekommen. Diese Website habe ich zu Übungszwecken erstellt, um
+        mich in neue Web-Technologien einzuarbeiten und versuche gleichzeitig
+        meine Illustrationen zu präsentieren. Aktuellste Zeichnungen findet man
+        aber auf meinem Instagram-Account.
+      </template>
+    </TextNormal>
+    <div class="image-right">
+      <img :src="BaerBuch" />
     </div>
-    <Component1 />
   </main>
 </template>

@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
-import JavascriptView from "../views/JavascriptView.vue";
+import IllustrationenView from "../views/IllustrationenView.vue";
+import CharacterDesignView from "../views/CharacterDesignView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,9 +21,14 @@ const router = createRouter({
       component: AboutView,
     },
     {
-      path: "/javascript",
-      name: "javascript",
-      component: JavascriptView,
+      path: "/illustrationen",
+      name: "illustrationen",
+      component: IllustrationenView,
+    },
+    {
+      path: "/characterdesign",
+      name: "characterdesign",
+      component: CharacterDesignView,
     },
   ],
 });

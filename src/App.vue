@@ -1,5 +1,6 @@
 <script setup>
 import Navigation from "./components/Navigation.vue";
+import { RouterView } from "vue-router";
 </script>
 
 <template>
@@ -14,11 +15,16 @@ import Navigation from "./components/Navigation.vue";
     <Navigation />
   </header>
 
+  <RouterView />
+
   <footer class="mt-1">
     <nav>
-      <a href="https://sascha-nabrotzky.github.io" target="_blank">Porfolio</a>
-      <a href="#">Sociallink2</a>
-      <a href="#">Sociallink3</a>
+      <a href="https://sascha-nabrotzky.github.io" target="_blank"
+        >Web-Development</a
+      >
+      <a href="https://www.instagram.com/sascha_nabrotzky" target="_blank"
+        >Instagram</a
+      >
     </nav>
   </footer>
 </template>
