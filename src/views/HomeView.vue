@@ -13,7 +13,7 @@ import BaerBuch from "@/assets/images/BaerAbenteuerBuch.jpg";
         Leidenschaft und zwar Charakter-Design und Illustration, welches ich als
         Hobby betreibe, wenn ich etwas Zeit freischaffen kann oder um den Kopf
         frei zu bekommen. Diese Website habe ich zu Übungszwecken erstellt, um
-        mich in neue Web-Technologien einzuarbeiten und versuche gleichzeitig
+        mich in <strong>"Vue 3"</strong> einzuarbeiten und versuche gleichzeitig
         meine Illustrationen zu präsentieren. Aktuellste Zeichnungen findet man
         aber auf meinem Instagram-Account.
       </template>

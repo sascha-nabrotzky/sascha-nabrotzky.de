@@ -47,7 +47,7 @@
   --clr-black: #0a0a0a;
   --clr-dgray: #1c1c1c;
   --clr-green: #42b883;
-  --clr-gray: #35495e;
+  --clr-gray: #5c5b5a;
 
   --margin-050: 0.5rem;
   --margin-100: 1rem;
@@ -85,6 +85,10 @@
 
 .mt-4 {
   margin-top: var(--margin-400);
+}
+
+.mb-1 {
+  margin-bottom: var(--margin-100);
 }
 
 .mb-2 {
@@ -137,6 +141,18 @@ header {
   flex-flow: column;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+}
+
+nav a {
+  margin-inline: 10px;
+  color: var(--clr-gray);
+  text-decoration: none;
+}
+
 footer {
   justify-content: center;
 }
@@ -155,8 +171,16 @@ strong {
 }
 
 @media screen and (max-width: 768px) {
+  nav {
+    justify-content: center;
+  }
+
   main {
     padding-inline: 1rem;
+  }
+
+  main > h1 {
+    margin: 0;
   }
 }
 
@@ -169,8 +193,16 @@ strong {
     grid-template-rows: min-content 1fr;
   }
 
-  main > h1 {
+  /* main > h1 {
     grid-column: 2 / 4;
+  } */
+
+  h1 {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0.2;
+    bottom: 2rem;
+    line-height: 1.1;
   }
 
   main > div:first-of-type {
@@ -183,7 +215,7 @@ strong {
 
   .image-right {
     grid-column: 3 / 5;
-    /* max-height: 500px;
-    overflow: hidden; */
+    max-height: 500px;
+    overflow: hidden;
   }
 }

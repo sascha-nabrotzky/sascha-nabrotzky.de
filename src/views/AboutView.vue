@@ -4,11 +4,13 @@ import TextNormal from "../components/TextNormal.vue";
 
 <template>
   <main>
-    <h1>Sascha Nabrotzky</h1>
+    <h1>Über mich</h1>
     <TextNormal>
       <template #subtitle>Ääääh, hm ...</template>
       <template #text>
-        Keine Ahnung, was hier im Moment schreiben soll.
+        wie so viele kreative Menschen, habe auch ich seit kindesalter meine
+        Zeichenstifte nie so richtig aus der Hand gelegt, später konnte ich in
+        meiner Ausbildung das Kreative mit dem Computer verbinden.
       </template>
     </TextNormal>
     <div class="image-right">

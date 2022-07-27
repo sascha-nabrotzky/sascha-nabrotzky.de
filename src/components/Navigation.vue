@@ -10,17 +10,3 @@ import { RouterLink } from "vue-router";
     <RouterLink to="/characterdesign">Charakter-Design</RouterLink>
   </nav>
 </template>
-
-<style>
-/* nav styling is not scoped */
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 0.5rem;
-}
-
-nav a {
-  margin-inline: 10px;
-  color: var(--clr-green);
-}
-</style>
