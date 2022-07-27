@@ -16,7 +16,7 @@ import TextNormal from "../components/TextNormal.vue";
       </template>
     </TextNormal>
     <div class="image-right">
-      <img src="@/images/Theo.jpg" />
+      <img src="@/assets/images/Theo.jpg" />
     </div>
   </main>
 </template>

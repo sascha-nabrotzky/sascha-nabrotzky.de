@@ -1,6 +1,6 @@
 <script setup>
 import TextNormal from "../components/TextNormal.vue";
-import BaerBuch from "@/images/BaerAbenteuerBuch.jpg";
+import BaerBuch from "@/assets/images/BaerAbenteuerBuch.jpg";
 </script>
 
 <template>

@@ -12,7 +12,7 @@ import TextNormal from "../components/TextNormal.vue";
       </template>
     </TextNormal>
     <div class="image-right">
-      <img src="@/images/Neantertalerjunge.jpg" />
+      <img src="@/assets/images/Neantertalerjunge.jpg" />
     </div>
   </main>
 </template>
