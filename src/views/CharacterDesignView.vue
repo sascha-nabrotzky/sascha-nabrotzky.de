@@ -1,10 +1,13 @@
 <script setup>
 import TextNormal from "../components/TextNormal.vue";
+import Headline from "../components/Headline.vue";
 </script>
 
 <template>
   <main>
-    <h1>Charakter-Design</h1>
+    <Headline>
+      <template #title>Charakter-Design</template>
+    </Headline>
     <TextNormal>
       <template #subtitle
         >Hier findest du demnächst meine Charakter-Design Projekte</template

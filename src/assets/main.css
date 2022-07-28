@@ -65,6 +65,9 @@
   --fw-light: 300;
   --fw-regular: 400;
   --fw-bold: 700;
+
+  --eff-hover: var(--clr-green);
+  --eff-trans: 0.15s ease-in-out;
 }
 
 .mt-05 {
@@ -114,6 +117,8 @@ body {
   letter-spacing: 0.07rem;
   background-color: var(--clr-dgray);
   color: var(--clr-white);
+  background-image: radial-gradient(rgba(20, 20, 20, 0.6) 2px, transparent 2px);
+  background-size: calc(10 * 1px) calc(10 * 1px);
 }
 
 #app {
@@ -130,8 +135,7 @@ h6 {
   font-family: var(--ff-serif);
 }
 
-header,
-footer {
+header {
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -139,22 +143,6 @@ footer {
 
 header {
   flex-flow: column;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 0.5rem;
-}
-
-nav a {
-  margin-inline: 10px;
-  color: var(--clr-gray);
-  text-decoration: none;
-}
-
-footer {
-  justify-content: center;
 }
 
 main {
@@ -193,16 +181,13 @@ strong {
     grid-template-rows: min-content 1fr;
   }
 
-  /* main > h1 {
-    grid-column: 2 / 4;
-  } */
-
-  h1 {
+  main > h1 {
     position: absolute;
     font-size: 100px;
-    opacity: 0.2;
+    opacity: 0.1;
     bottom: 2rem;
     line-height: 1.1;
+    transition: 0.5s ease-in-out;
   }
 
   main > div:first-of-type {
