@@ -1,0 +1,230 @@
+/* source-sans-3-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/source-sans-3-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* source-sans-3-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Source Sans 3';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/source-sans-3-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* Custom Properties */
+:root {
+    --ff-sans: 'Source Sans 3', 'sans-serif';
+    --p-x: 32px;
+    --p-y: 16px;
+
+    --brkp-sm: 640px;
+    --brkp-md: 768px;
+    --brkp-lg: 1024px;
+    --brkp-xl: 1280px;
+    --brkp-2xl: 1536px;
+    --brkp-3xl: 1920px;
+
+    --fs-xs: 0.7rem;
+    --fs-sm: 0.8rem; /* small */
+    --fs-base: 1rem; /* p */
+    --fs-lg: 1.25rem; /* h6 */
+    --fs-xl: 1.563rem; /* h5 */
+    --fs-2xl: 1.953rem; /* h4 */
+    --fs-3xl: 2.441rem; /* h3 */
+    --fs-4xl: 3.052rem; /* h2 */
+    --fs-5xl: 3.815rem; /* h1 */
+
+    --lh-base: 1.3; /* p */
+
+    --grid-cols-sm: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 20rem)
+        minmax(1rem, 1fr);
+    --grid-cols-lg: minmax(2rem, 1fr) [extended-start] 5rem minmax(0, 40rem)
+        minmax(0, 20rem) [extended-end] 5rem minmax(2rem, 1fr);
+
+    --color-black-25: color-mix(in srgb, var(--color-black) 25%, transparent);
+    --color-black-50: color-mix(in srgb, var(--color-black) 50%, transparent);
+    --color-white-25: color-mix(in srgb, var(--color-white) 25%, transparent);
+    --color-white-50: color-mix(in srgb, var(--color-white) 50%, transparent);
+    --color-primary-25: color-mix(
+        in srgb,
+        var(--color-primary) 25%,
+        transparent
+    );
+    --color-primary-50: color-mix(
+        in srgb,
+        var(--color-primary) 50%,
+        transparent
+    );
+    --color-secondary-25: color-mix(
+        in srgb,
+        var(--color-secondary) 25%,
+        transparent
+    );
+    --color-secondary-50: color-mix(
+        in srgb,
+        var(--color-secondary) 50%,
+        transparent
+    );
+    --color-tertiary-25: color-mix(
+        in srgb,
+        var(--color-tertiary) 25%,
+        transparent
+    );
+    --color-tertiary-50: color-mix(
+        in srgb,
+        var(--color-tertiary) 50%,
+        transparent
+    );
+}
+
+/* Headlines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    word-break: break-word;
+    hyphens: auto;
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--fs-5xl);
+}
+h2 {
+    font-size: var(--fs-4xl);
+}
+h3 {
+    font-size: var(--fs-3xl);
+}
+h4 {
+    font-size: var(--fs-2xl);
+}
+h5 {
+    font-size: var(--fs-xl);
+}
+h6 {
+    font-size: var(--fs-lg);
+}
+p {
+    line-height: var(--lh-base);
+    font-size: var(--fs-base);
+}
+small {
+    font-size: var(--fs-sm);
+}
+
+/* Spacings from BE */
+.frame-space-before-extra-small {
+    margin-top: 1rem;
+}
+.frame-space-before-small {
+    margin-top: 2rem;
+}
+.frame-space-before-medium {
+    margin-top: 3rem;
+}
+.frame-space-before-large {
+    margin-top: 4rem;
+}
+.frame-space-before-extra-large {
+    margin-top: 5rem;
+}
+
+.frame-space-after-extra-small {
+    margin-bottom: 1rem;
+}
+.frame-space-after-small {
+    margin-bottom: 2rem;
+}
+.frame-space-after-medium {
+    margin-bottom: 3rem;
+}
+.frame-space-after-large {
+    margin-bottom: 4rem;
+}
+.frame-space-after-extra-large {
+    margin-bottom: 5rem;
+}
+
+/* Global styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    color: var(--color-black);
+    font-family: var(--ff-sans);
+}
+
+h3:has(+ h4) {
+    margin-bottom: 0.5rem;
+}
+
+h5:has(+ h6) {
+    margin-bottom: 0.2rem;
+}
+
+p {
+    margin: 0.5rem 0;
+
+    &:has(time) {
+        text-align: right;
+        color: var(--color-black-50);
+        margin-block: 0;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Links */
+nav {
+    a {
+        text-decoration: none;
+
+        &:vistited {
+            color: inherit;
+        }
+    }
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 1px;
+}
+
+[data-layout='default'] .main-content header a {
+    text-decoration: none;
+    pointer-events: none;
+}
+
+/* Images */
+figure {
+    margin: 0;
+    padding: 1rem 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Video */
+div:has(iframe) {
+    display: flex;
+    justify-content: center;
+    padding-block: 2rem;
+}

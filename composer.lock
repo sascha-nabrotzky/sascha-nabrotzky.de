@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a128cfe0909f9bbd5dcb30b2ad285ad",
+    "content-hash": "25c32f3e317f599a48cf7126b508ac44",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2116,6 +2116,56 @@
                 "source": "https://github.com/ralouphie/getallheaders/tree/develop"
             },
             "time": "2019-03-08T08:55:37+00:00"
+        },
+        {
+            "name": "sn/site-package",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "./packages/site_package",
+                "reference": "3eed1ace46574423042a653f2c0ce3b9a3306cd9"
+            },
+            "require": {
+                "typo3/cms-core": "^13.2.0|dev-main",
+                "typo3/cms-fluid-styled-content": "^13.2.0|dev-main"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "site_package"
+                },
+                "branch-alias": {
+                    "dev-master": "13.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sn\\SitePackage\\": "Classes/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sascha Nabrotzky",
+                    "role": "Developer",
+                    "homepage": "https://typo3.org/community/teams/documentation"
+                }
+            ],
+            "description": "Site package for Sascha Nabrotzky Illustration Portfolio",
+            "homepage": "https://github.com/sascha-nabrotzky/sascha-nabrotzky.de",
+            "keywords": [
+                "documentation",
+                "site package",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/sascha-nabrotzky/sascha-nabrotzky.de/issues"
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "symfony/cache",
@@ -6817,7 +6867,7 @@
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php": "8.2.0"
+        "php": "8.3.2"
     },
     "plugin-api-version": "2.6.0"
 }

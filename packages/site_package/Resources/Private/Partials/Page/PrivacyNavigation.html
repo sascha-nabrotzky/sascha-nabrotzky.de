@@ -1,0 +1,18 @@
+<f:if condition="{privacyNavigation}">
+    <nav class="privacy-nav">
+        <f:for each="{privacyNavigation}" as="privacyNavItem">
+            <li
+                class="nav-item {f:if(condition: privacyNavItem.active, then: 'active')}"
+            >
+                <a
+                    class="nav-link"
+                    href="{privacyNavItem.link}"
+                    target="{privacyNavItem.target}"
+                    title="{privacyNavItem.title}"
+                >
+                    {privacyNavItem.title}
+                </a>
+            </li>
+        </f:for>
+    </nav>
+</f:if>

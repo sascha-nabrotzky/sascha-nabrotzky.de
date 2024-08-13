@@ -1,0 +1,40 @@
+{
+    "name": "sn/site-package",
+    "type": "typo3-cms-extension",
+    "description": "Site package for Sascha Nabrotzky Illustration Portfolio",
+    "authors": [
+        {
+            "name": "Sascha Nabrotzky",
+            "role": "Developer",
+            "homepage": "https://typo3.org/community/teams/documentation"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^13.2.0|dev-main",
+        "typo3/cms-fluid-styled-content": "^13.2.0|dev-main"
+    },
+    "homepage": "https://github.com/sascha-nabrotzky/sascha-nabrotzky.de",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": [
+        "typo3",
+        "site package",
+        "documentation"
+    ],
+    "support": {
+        "issues": "https://github.com/sascha-nabrotzky/sascha-nabrotzky.de/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sn\\SitePackage\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "site_package"
+        },
+        "branch-alias": {
+            "dev-master": "13.2.x-dev"
+        }
+    }
+}

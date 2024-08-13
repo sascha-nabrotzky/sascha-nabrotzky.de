@@ -1,0 +1,45 @@
+<f:layout name="Default" />
+
+<f:section name="Extended">
+    <f:if condition="{extendedContent}">
+        <div class="extended">
+            <f:for each="{extendedContent}" as="contentExtendedElement">
+                <f:cObject
+                    typoscriptObjectPath="tt_content.{contentExtendedElement.data.CType}"
+                    data="{contentExtendedElement.data}"
+                    table="tt_content"
+                />
+            </f:for>
+        </div>
+    </f:if>
+</f:section>
+
+<f:section name="Main">
+    <f:if condition="{mainContent}">
+        <main id="main">
+            <f:for each="{mainContent}" as="contentMainElement">
+                <f:cObject
+                    typoscriptObjectPath="tt_content.{contentMainElement.data.CType}"
+                    data="{contentMainElement.data}"
+                    table="tt_content"
+                />
+            </f:for>
+        </main>
+    </f:if>
+</f:section>
+
+<f:section name="Footer">
+    <footer>
+        <f:if condition="{footerContent}">
+            <f:for each="{footerContent}" as="contentFooterElement">
+                <f:cObject
+                    typoscriptObjectPath="tt_content.{contentFooterElement.data.CType}"
+                    data="{contentFooterElement.data}"
+                    table="tt_content"
+                />
+            </f:for>
+        </f:if>
+
+        <f:render partial="PrivacyNavigation" arguments="{_all}" />
+    </footer>
+</f:section>

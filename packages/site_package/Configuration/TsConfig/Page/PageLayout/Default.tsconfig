@@ -1,0 +1,41 @@
+mod.web_layout.BackendLayouts {
+    default {
+        title = Default Layout
+        icon = EXT:site_package/Resources/Public/Icons/BackendLayouts/Default.svg
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Extended
+                                colspan = 1
+                                colPos = 0
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Main
+                                colspan = 1
+                                colPos = 1
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = Footer
+                                colspan = 1
+                                colPos = 2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

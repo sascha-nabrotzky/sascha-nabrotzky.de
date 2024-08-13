@@ -1,0 +1,127 @@
+// Global site configuration
+config {
+  # Adjust the title tag to be displayed as “website - page title”
+  // pageTitleFirst = 1
+  pageTitleSeparator = |
+  pageTitleSeparator.noTrimWrap = | | |
+  
+  no_cache = 1
+
+  # Falls OOOps and Error im FE angezeigt wird, damit wird Fehler angezeigt
+  contentObjectExceptionHandler = 0
+  
+  headerComment = Webdesign by Sascha Nabrotzky -> sascha-nabrotzky.github.io
+
+  # Spam protection for email addresses
+  spamProtectEmailAddresses = -2
+  spamProtectEmailAddresses_lastDotSubst = (at)
+  spamProtectEmailAddresses_lastDotSubst = (dot)
+}
+
+page = PAGE
+page {
+  typeNum = 0
+
+  meta {
+    viewport = width=device-width, initial-scale=1
+    description = 
+    keywords = 
+  }
+
+  includeCSS {
+      importcss = EXT:site_package/Resources/Public/Css/import.css
+      // postcss = EXT:site_package/Resources/Public/Css/post-output.css
+  }
+
+  includeJSFooter {
+  }
+
+  bodyTagCObject = TEXT
+  bodyTagCObject {
+    data = pagelayout
+    split {
+        token = pagets__
+        cObjNum = 1
+        1.current = 1
+      }
+    wrap = <body data-layout="|">
+  }
+
+  shortcutIcon = 
+
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+  templateName = TEXT
+  templateName {
+    cObject = TEXT
+    cObject {
+      data = pagelayout
+      required = 1
+      case = ucfirst
+      split {
+        token = pagets__
+        cObjNum = 1
+        1.current = 1
+      }
+    }
+
+    ifEmpty = Default
+  }
+
+  templateRootPaths {
+    0 = EXT:site_package/Resources/Private/Templates/Page/
+    1 = {$page.fluidtemplate.templateRootPath}
+  }
+
+  partialRootPaths {
+    0 = EXT:site_package/Resources/Private/Partials/Page/
+    1 = {$page.fluidtemplate.partialRootPath}
+  }
+
+  layoutRootPaths {
+    0 = EXT:site_package/Resources/Private/Layouts/Page/
+    1 = {$page.fluidtemplate.layoutRootPath}
+  }
+
+  dataProcessing {
+      10 = menu
+      10 {
+         levels = 1
+         includeSpacer = 1
+         as = mainNavigation
+      }
+
+      30 = menu
+      30 {
+          special = directory
+          special.value = {$site_package.configuration.folder.privacy} // ID of the page where the menu should start
+          as = privacyNavigation
+      }
+
+      50 = database-query
+      50 {
+        table = tt_content
+        orderBy = sorting
+        where = colPos = 0
+        as = extendedContent
+      }
+
+      60 = database-query
+      60 {
+        table = tt_content
+        orderBy = sorting
+        where = colPos = 1
+        as = mainContent
+      }
+
+      80 = database-query
+      80 {
+        table = tt_content
+        orderBy = sorting
+        where = colPos = 2
+        as = footerContent
+      }
+    }
+}
