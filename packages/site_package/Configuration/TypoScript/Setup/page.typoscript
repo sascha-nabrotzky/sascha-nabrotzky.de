@@ -88,7 +88,7 @@ page.10 {
   dataProcessing {
       10 = menu
       10 {
-         levels = 1
+         levels = 2
          includeSpacer = 1
          as = mainNavigation
       }
