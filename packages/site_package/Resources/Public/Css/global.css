@@ -20,15 +20,15 @@
     --brkp-2xl: 1536px;
     --brkp-3xl: 1920px;
 
-    --fs-xs: 0.444rem;
-    --fs-sm: 0.667rem; /* small */
-    --fs-base: 1.35rem; /*  p */
-    --fs-lg: 1.5rem; /* h6 */
-    --fs-xl: 2.25rem; /* h5 */
-    --fs-2xl: 3.375rem; /* h4 */
-    --fs-3xl: 5.063rem; /* h3 */
-    --fs-4xl: 7.594rem; /* h2 */
-    --fs-5xl: 11.391rem; /* h1 */
+    --fs-xs: 0.563rem;
+    --fs-sm: 0.75rem; /* small */
+    --fs-base: 1rem; /*  p */
+    --fs-lg: 1.333rem; /* h6 */
+    --fs-xl: 1.777rem; /* h5 */
+    --fs-2xl: 2.369rem; /* h4 */
+    --fs-3xl: 3.157rem; /* h3 */
+    --fs-4xl: 4.209rem; /* h2 */
+    --fs-5xl: 5.61rem; /* h1 */
 
     --lh-base: 1.3; /* p */
 
@@ -51,7 +51,7 @@ h6 {
 
 /* Font sizes */
 body {
-    font-size: var(--fs-base);
+    font-size: var(--fs-xl);
     line-height: var(--lh-base);
 }
 h1 {
@@ -60,10 +60,11 @@ h1 {
 }
 h2 {
     font-size: var(--fs-4xl);
+    line-height: 1;
 }
 h3 {
     font-size: var(--fs-3xl);
-    line-height: 0.8;
+    line-height: 1;
 }
 h4 {
     font-size: var(--fs-2xl);
