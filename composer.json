@@ -9,18 +9,11 @@
             "typo3/cms-composer-installers": true
         },
         "platform": {
-            "php": "8.3.10"
+            "php": "8.2.0"
         },
         "sort-packages": true
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./packages/*"
-        }
-    ],
     "require": {
-        "sn/site-package": "^1.0",
         "typo3/cms-backend": "^13.1",
         "typo3/cms-belog": "^13.1",
         "typo3/cms-beuser": "^13.1",
