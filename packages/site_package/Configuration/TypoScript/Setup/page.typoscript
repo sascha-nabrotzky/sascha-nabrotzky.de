@@ -8,7 +8,7 @@ config {
   no_cache = 1
 
   # Falls OOOps and Error im FE angezeigt wird, damit wird Fehler angezeigt
-  contentObjectExceptionHandler = 0
+  contentObjectExceptionHandler = 1
   
   headerComment = Webdesign by Sascha Nabrotzky -> sascha-nabrotzky.github.io
 
@@ -30,7 +30,6 @@ page {
 
   includeCSS {
       importcss = EXT:site_package/Resources/Public/Css/import.css
-      // postcss = EXT:site_package/Resources/Public/Css/post-output.css
   }
 
   includeJSFooter {
