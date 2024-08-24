@@ -1,6 +1,6 @@
 <f:if condition="{mainNavigation}">
     <nav class="main-nav">
-        <f:link.page pageUid="{data.pid}">Startseite</f:link.page>
+        <f:link.page pageUid="13">Startseite</f:link.page>
         <f:for each="{mainNavigation}" as="mainNavItem">
             <a
                 href="{mainNavItem.link}"
@@ -13,5 +13,3 @@
         </f:for>
     </nav>
 </f:if>
-
-<f:debug inline="1">{_all}</f:debug>
