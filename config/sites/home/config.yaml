@@ -1,24 +1,26 @@
-base: "https://sascha-nabrotzky.de.ddev.site/"
+base: 'https://sascha-nabrotzky.de.ddev.site/'
 languages:
-    - title: English
-      enabled: true
-      languageId: 1
-      base: /en/
-      locale: en_US.UTF-8
-      navigationTitle: English
-      flag: us
-      hreflang: ""
-      websiteTitle: ""
-    - title: German
-      enabled: true
-      locale: de_DE
-      hreflang: ""
-      base: /
-      websiteTitle: ""
-      navigationTitle: Deutsch
-      fallbackType: strict
-      fallbacks: ""
-      flag: de
-      languageId: 0
-rootPageId: 1
-websiteTitle: "Sascha Nabrotzky | Illustrator"
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: us
+    hreflang: ''
+    websiteTitle: ''
+  -
+    title: German
+    enabled: true
+    locale: de_DE
+    hreflang: ''
+    base: /de/
+    websiteTitle: ''
+    navigationTitle: Deutsch
+    fallbackType: strict
+    fallbacks: ''
+    flag: de
+    languageId: 2
+rootPageId: 13
+websiteTitle: ''
