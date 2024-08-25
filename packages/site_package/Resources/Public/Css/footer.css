@@ -1,10 +1,18 @@
 footer {
     margin-top: auto;
     padding: 2rem;
+    font-size: var(--fs-lg);
 
     nav {
         display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+        gap: 2rem;
+        justify-content: flex-end;
+        border-top: 1px solid var(--color-black);
+        padding-top: 1rem;
+
+        .active {
+            text-decoration-color: orange;
+            text-decoration-thickness: 2px;
+        }
     }
 }

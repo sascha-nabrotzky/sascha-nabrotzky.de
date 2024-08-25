@@ -1,17 +1,17 @@
 /* reenie-beanie-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Reenie Beanie";
+    font-family: 'Reenie Beanie';
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/ReenieBeanie-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    src: url('../fonts/ReenieBeanie-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 /* Custom Properties */
 :root {
-    --ff-handwriting: "Reenie Beanie", cursive;
-    --ff-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
-        "DejaVu Sans Mono", monospace;
+    --ff-handwriting: 'Reenie Beanie', cursive;
+    --ff-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+        'DejaVu Sans Mono', monospace;
 
     --brkp-sm: 640px;
     --brkp-md: 768px;
@@ -32,7 +32,8 @@
 
     --lh-base: 1.3; /* p */
 
-    --color-black: #404040;
+    --color-black: hsl(0, 0%, 25%);
+    --color-sand: hsl(28.42deg 100% 96.27%);
 }
 
 /* Headlines */
@@ -56,15 +57,15 @@ body {
 }
 h1 {
     font-size: var(--fs-5xl);
-    line-height: 1;
+    line-height: 0.9;
 }
 h2 {
     font-size: var(--fs-4xl);
-    line-height: 1;
+    line-height: 0.9;
 }
 h3 {
     font-size: var(--fs-3xl);
-    line-height: 1;
+    line-height: 0.9;
 }
 h4 {
     font-size: var(--fs-2xl);
@@ -122,6 +123,7 @@ body {
     flex-direction: column;
     min-height: 100svh;
     color: var(--color-black);
+    background-color: var(--color-sand);
     font-family: var(--ff-handwriting);
     font-style: normal;
 }
