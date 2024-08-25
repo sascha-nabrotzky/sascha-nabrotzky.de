@@ -1,8 +1,13 @@
 .main-nav {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 2.5rem;
     padding: 2rem;
+
+    @media (width <= 640px) {
+        padding: 1rem;
+    }
 
     .active {
         text-decoration-thickness: 2px;

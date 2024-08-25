@@ -46,7 +46,7 @@ page {
     wrap = <body data-layout="|">
   }
 
-  shortcutIcon = 
+  shortcutIcon = EXT:site_package/Resources/Public/Icons/favicon.ico
 
 }
 

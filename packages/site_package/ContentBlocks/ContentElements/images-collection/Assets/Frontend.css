@@ -1,0 +1,17 @@
+.images-collection {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .image-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+
+        .description {
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

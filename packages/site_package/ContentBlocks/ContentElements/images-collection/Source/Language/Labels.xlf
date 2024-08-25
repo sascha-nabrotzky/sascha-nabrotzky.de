@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file datatype="plaintext" original="Labels.xlf" source-language="en" date="2024-08-25T16:08:24+00:00" product-name="sn/images-collection">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Images collection</source>
+			</trans-unit>
+			<trans-unit id="description" resname="description">
+				<source>Description for Content Element sn/images-collection</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,33 @@
+<cb:asset.css
+    identifier="content-block-css-sn-sn/images-collection"
+    file="Frontend.css"
+/>
+<cb:asset.script
+    identifier="content-block-js-sn-sn/images-collection"
+    file="Frontend.js"
+/>
+
+<div class="images-collection">
+    <f:if condition="{data.header}">
+        <h3>{data.header}</h3>
+    </f:if>
+    <f:for each="{data.collection}" as="image-item">
+        <div class="image-item">
+            <f:if condition="{image-item.image}">
+                <f:for each="{image-item.image}" as="image">
+                    <div class="image-wrapper">
+                        <f:image
+                            image="{image}"
+                            alt="{image-item.header}"
+                            cropVariant="default"
+                            maxWidth="600"
+                        />
+                    </div>
+                </f:for>
+            </f:if>
+            <div class="description">
+                <p>{image-item.header}: {image-item.text}</p>
+            </div>
+        </div>
+    </f:for>
+</div>

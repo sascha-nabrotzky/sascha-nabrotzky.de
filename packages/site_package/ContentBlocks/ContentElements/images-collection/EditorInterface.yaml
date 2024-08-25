@@ -1,0 +1,30 @@
+name: sn/images-collection
+typeName: sn_imagescollection
+group: default
+prefixFields: true
+prefixType: full
+basics:
+  - TYPO3/Appearance
+fields:
+  - identifier: header
+    useExistingField: true
+    label: Header
+    type: Text
+  - identifier: collection
+    type: Collection
+    minitems: 1
+    fields:
+      - identifier: image
+        useExistingField: true
+        label: Bild
+        allowed: jpeg,jpg,png
+        maxitems: 1
+        type: File
+      - identifier: header
+        useExistingField: true
+        label: Bildtitel
+        type: Text
+      - identifier: text
+        useExistingField: true
+        label: Bildbeschreibung
+        type: Text

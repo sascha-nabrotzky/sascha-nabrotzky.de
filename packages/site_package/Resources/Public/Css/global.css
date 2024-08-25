@@ -165,7 +165,7 @@ a {
 }
 
 /* Images */
-figure {
+/* figure {
     margin: 0;
     padding: 1rem 0;
 
@@ -174,4 +174,4 @@ figure {
         height: 100%;
         object-fit: cover;
     }
-}
+} */
