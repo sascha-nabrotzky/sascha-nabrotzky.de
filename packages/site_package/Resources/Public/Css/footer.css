@@ -10,7 +10,6 @@ footer {
     nav {
         display: flex;
         gap: 2rem;
-        justify-content: flex-end;
 
         .active {
             text-decoration-color: orange;
