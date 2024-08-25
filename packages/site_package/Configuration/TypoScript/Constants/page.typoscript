@@ -9,3 +9,5 @@ page {
 # customcategory=folder=LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:folder
 #cat=folder/Folder/privacy; type=number; label=Folder number for privacy pages
 site_package.configuration.folder.privacy = 0
+#cat=folder/Folder/privacy; type=number; label=Id for start page
+site_package.configuration.folder.startpageId = 0

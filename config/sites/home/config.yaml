@@ -3,13 +3,13 @@ languages:
   -
     title: English
     enabled: true
-    languageId: 0
-    base: /
     locale: en_US.UTF-8
+    hreflang: ''
+    base: /
+    websiteTitle: ''
     navigationTitle: English
     flag: us
-    hreflang: ''
-    websiteTitle: ''
+    languageId: 0
   -
     title: German
     enabled: true
@@ -21,6 +21,6 @@ languages:
     fallbackType: strict
     fallbacks: ''
     flag: de
-    languageId: 2
-rootPageId: 13
+    languageId: 1
+rootPageId: 1
 websiteTitle: 'Sascha Nabrotzky | Illustration'
