@@ -150,18 +150,23 @@ li {
 }
 
 /* Links */
+a {
+    color: inherit;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 1px;
+}
+
 nav {
     a {
         &:vistited {
             color: inherit;
         }
     }
-}
 
-a {
-    color: inherit;
-    text-underline-offset: 0.3rem;
-    text-decoration-thickness: 1px;
+    .active {
+        text-decoration-color: orange;
+        text-decoration-thickness: 2px;
+    }
 }
 
 /* Images */

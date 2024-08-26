@@ -13,10 +13,5 @@ footer {
     nav {
         display: flex;
         gap: 2rem;
-
-        .active {
-            text-decoration-color: orange;
-            text-decoration-thickness: 2px;
-        }
     }
 }
