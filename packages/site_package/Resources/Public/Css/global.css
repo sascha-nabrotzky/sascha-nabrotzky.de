@@ -121,9 +121,9 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    background-color: var(--color-sand);
     min-height: 100svh;
     color: var(--color-black);
-    background-color: var(--color-sand);
     font-family: var(--ff-handwriting);
     font-style: normal;
 }
@@ -167,4 +167,10 @@ a {
 /* Images */
 figure {
     margin: 1rem 0;
+}
+
+.bg-image-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

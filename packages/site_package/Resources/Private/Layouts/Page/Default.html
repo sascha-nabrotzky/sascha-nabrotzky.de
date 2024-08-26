@@ -1,8 +1,9 @@
 <f:if condition="{data.media}">
     <f:then>
         <f:asset.css identifier="identifier123">
-            body { background-image: url('{f:uri.image(src: '{data.media}')}');
-            background-position: bottom right; background-repeat: no-repeat;}
+            body { background-image: url('{f:cObject(typoscriptObjectPath:
+            'lib.headerimage')}'); background-position: bottom right;
+            background-repeat: no-repeat;}
         </f:asset.css>
     </f:then>
 </f:if>

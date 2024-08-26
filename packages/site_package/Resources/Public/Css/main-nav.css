@@ -6,6 +6,7 @@
     padding: 2rem;
 
     @media (width <= 640px) {
+        flex-direction: column;
         padding: 1rem;
     }
 

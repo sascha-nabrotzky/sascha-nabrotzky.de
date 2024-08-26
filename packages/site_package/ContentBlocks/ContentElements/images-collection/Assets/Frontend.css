@@ -12,6 +12,8 @@
         flex-direction: column;
 
         .image-wrapper {
+            margin-bottom: 0.5rem;
+
             img {
                 width: 100%;
                 max-width: 700px;
