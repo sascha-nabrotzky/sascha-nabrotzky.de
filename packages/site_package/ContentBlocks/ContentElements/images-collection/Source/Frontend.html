@@ -9,7 +9,7 @@
 
 <div class="images-collection">
     <f:if condition="{data.header}">
-        <h3>{data.header}</h3>
+        <h3 class="headline">{data.header}</h3>
     </f:if>
     <f:for each="{data.collection}" as="image-item">
         <div class="image-item">
@@ -20,7 +20,7 @@
                             image="{image}"
                             alt="{image-item.header}"
                             cropVariant="default"
-                            maxWidth="600"
+                            maxWidth="700"
                         />
                     </div>
                 </f:for>

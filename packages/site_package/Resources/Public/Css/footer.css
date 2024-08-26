@@ -1,7 +1,10 @@
 footer {
     margin-top: auto;
     padding: 2rem;
+    width: 100%;
+    max-width: 90rem;
     font-size: var(--fs-lg);
+    margin-inline: auto;
 
     @media (width <= 640px) {
         padding: 1rem;

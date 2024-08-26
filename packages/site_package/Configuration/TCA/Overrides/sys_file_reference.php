@@ -18,20 +18,15 @@ $GLOBALS['TCA'][$table]['columns'][$field]['config'] = [
                      'title' => 'Hochformat',
                      'value' => 1 / 1.41
                  ],
+                 '1:1' => [
+                    'title' => '1:1',
+                    'value' => 1 / 1
+                ],
                  'Frei' => [
                      'title' => 'Frei',
                      'value' => 0.0
                  ],
              ],
-        ],
-         'quadratisch' => [
-            'title' => 'Quadratisch',
-            'allowedAspectRatios' => [
-                '1:1' => [
-                    'title' => '1:1',
-                    'value' => 1 / 1
-                ],
-            ],
         ],
      ]
 ];
