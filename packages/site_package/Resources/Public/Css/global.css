@@ -9,9 +9,7 @@
 
 /* Custom Properties */
 :root {
-    --ff-handwriting: 'Reenie Beanie', cursive;
-    --ff-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
-        'DejaVu Sans Mono', monospace;
+    --ff-handwriting: 'Reenie Beanie', sans-serif;
 
     --brkp-sm: 640px;
     --brkp-md: 768px;
@@ -36,6 +34,8 @@
     --color-sand: hsl(28.42deg 100% 96.27%);
 }
 
+/* T Y P O G R A P H Y */
+
 /* Headlines */
 h1,
 h2,
@@ -43,29 +43,34 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+    margin: 0 0 0.5rem 0;
     word-break: break-word;
     hyphens: auto;
     text-wrap: balance;
     font-weight: 400;
 }
-
-/* Font sizes */
-body {
-    font-size: var(--fs-xl);
-    line-height: var(--lh-base);
-}
 h1 {
     font-size: var(--fs-5xl);
     line-height: 0.9;
+
+    @media (width <= 640px) {
+        font-size: 18vw;
+        margin-bottom: 0.5rem;
+    }
 }
 h2 {
     font-size: var(--fs-4xl);
     line-height: 0.9;
+
+    @media (width <= 640px) {
+        font-size: 15vw;
+        margin-bottom: 1rem;
+    }
 }
 h3 {
     font-size: var(--fs-3xl);
     line-height: 0.9;
+    margin-bottom: 0.5rem;
 }
 h4 {
     font-size: var(--fs-2xl);
@@ -80,7 +85,17 @@ small {
     font-size: var(--fs-sm);
 }
 
-/* Spacings from BE */
+/* Bodytext */
+body {
+    font-size: var(--fs-xl);
+    line-height: var(--lh-base);
+}
+p {
+    margin-block: 0 0.5rem;
+    line-height: 1.1;
+}
+
+/* SPACINGS from BE */
 .frame-space-before-extra-small {
     margin-top: 1rem;
 }
@@ -126,23 +141,6 @@ body {
     color: var(--color-black);
     font-family: var(--ff-handwriting);
     font-style: normal;
-}
-
-h3:has(+ h4) {
-    margin-bottom: 0.5rem;
-}
-
-h5:has(+ h6) {
-    margin-bottom: 0.2rem;
-}
-
-p {
-    margin: 0.5rem 0;
-
-    &:has(time) {
-        text-align: right;
-        margin-block: 0;
-    }
 }
 
 li {
