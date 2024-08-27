@@ -9,7 +9,10 @@
 
 <div class="images-collection">
     <f:if condition="{data.header}">
-        <h3 class="headline">{data.header}</h3>
+        <header>
+            <h3 class="headline">{data.header}</h3>
+            <div class="line" />
+        </header>
     </f:if>
     <f:for each="{data.collection}" as="image-item">
         <div class="image-item">

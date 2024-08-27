@@ -1,15 +1,35 @@
 .images-collection {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
-    gap: 2rem 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(600px, 100%), 1fr));
+    gap: 2rem 2.5rem;
 
-    .headline {
+    header {
         grid-column: 1 / -1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .headline {
+            background-color: var(--color-sand);
+            z-index: 1;
+            padding-inline: 1rem;
+        }
+
+        .line {
+            border-top: 4px dotted var(--color-black);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 1.7rem;
+            z-index: 0;
+        }
     }
 
     .image-item {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        position: relative;
 
         .image-wrapper {
             margin-bottom: 0.5rem;
@@ -19,10 +39,17 @@
                 max-width: 700px;
                 height: 100%;
                 object-fit: cover;
+                border-radius: 0.3rem;
             }
         }
 
         .description {
+            position: absolute;
+            bottom: 0;
+            background-color: var(--color-sand);
+            padding: 0.5rem 1rem 0;
+            border-radius: 0.3rem 0.3rem 0 0;
+
             p {
                 margin: 0;
             }
