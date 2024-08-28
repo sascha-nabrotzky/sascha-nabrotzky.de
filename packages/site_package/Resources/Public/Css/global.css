@@ -31,6 +31,8 @@
     --fs-4xl: 4.209rem; /* h2 */
     --fs-5xl: 5.61rem; /* h1 */
 
+    --lh-xs: 0.9;
+    --lh-sm: 1.1;
     --lh-base: 1.3; /* p */
 
     --color-black: hsl(0, 0%, 25%);
@@ -57,7 +59,7 @@ h6 {
 }
 h1 {
     font-size: var(--fs-5xl);
-    line-height: 0.9;
+    line-height: var(--lh-xs);
 
     @media (width <= 640px) {
         font-size: 18vw;
@@ -66,7 +68,7 @@ h1 {
 }
 h2 {
     font-size: var(--fs-4xl);
-    line-height: 0.9;
+    line-height: var(--lh-xs);
 
     @media (width <= 640px) {
         font-size: 15vw;
@@ -75,7 +77,7 @@ h2 {
 }
 h3 {
     font-size: var(--fs-3xl);
-    line-height: 0.9;
+    line-height: var(--lh-xs);
     margin-bottom: 0.5rem;
 }
 h4 {
@@ -95,7 +97,7 @@ body {
 }
 p {
     margin-block: 0 0.5rem;
-    line-height: 1.1;
+    line-height: var(--lh-sm);
 }
 small {
     font-size: var(--fs-sm);
