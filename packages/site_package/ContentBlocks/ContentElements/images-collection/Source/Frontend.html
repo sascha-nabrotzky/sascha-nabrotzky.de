@@ -14,14 +14,14 @@
             <div class="line" />
         </header>
     </f:if>
-    <f:for each="{data.collection}" as="image-item">
-        <div class="image-item">
-            <f:if condition="{image-item.image}">
-                <f:for each="{image-item.image}" as="image">
+    <f:for each="{data.collection}" as="collection-item">
+        <div class="collection-item">
+            <f:if condition="{collection-item.image}">
+                <f:for each="{collection-item.image}" as="image">
                     <div class="image-wrapper">
                         <f:image
                             image="{image}"
-                            alt="{image-item.header}"
+                            alt="{collection-item.header}"
                             cropVariant="default"
                             maxWidth="700"
                             loading="lazy"
@@ -30,7 +30,7 @@
                 </f:for>
             </f:if>
             <div class="description">
-                <p>{image-item.header} {image-item.text}</p>
+                <p>{collection-item.header} {collection-item.text}</p>
             </div>
         </div>
     </f:for>

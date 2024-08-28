@@ -7,7 +7,10 @@
     src: url('../fonts/ReenieBeanie-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
-/* Custom Properties */
+/* ******************* *
+*      Properties      *
+*  ******************* */
+
 :root {
     --ff-handwriting: 'Reenie Beanie', sans-serif;
 
@@ -32,9 +35,12 @@
 
     --color-black: hsl(0, 0%, 25%);
     --color-sand: hsl(28deg 100% 97.5%);
+    --color-orange: hsl(39, 100%, 50%);
 }
 
-/* T Y P O G R A P H Y */
+/* ******************* *
+*       Typography     *
+*  ******************* */
 
 /* Headlines */
 h1,
@@ -95,7 +101,7 @@ small {
     font-size: var(--fs-sm);
 }
 
-/* SPACINGS from BE */
+/* Typo3 spacings */
 .frame-space-before-extra-small {
     margin-top: 1rem;
 }
@@ -128,7 +134,10 @@ small {
     margin-bottom: 5rem;
 }
 
-/* Global styling */
+/* ******************* *
+*        Layout        *
+*  ******************* */
+
 html {
     scroll-behavior: smooth;
 }
@@ -170,22 +179,19 @@ nav {
     }
 
     .active {
-        text-decoration-color: orange;
+        text-decoration-color: var(--color-orange);
         text-decoration-thickness: 2px;
     }
 }
 
-/* Images */
+/* ******************* *
+*         Images       *
+*  ******************* */
+
+/* Typo 3 CE */
 figure {
     margin: 1rem 0;
 }
-
-.bg-image-wrapper {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-
 .ce-image img {
     width: 100%;
     max-width: 600px;
@@ -196,4 +202,11 @@ figure {
 }
 .ce-center .image {
     text-align: center;
+}
+
+/* Custom */
+.bg-image-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
