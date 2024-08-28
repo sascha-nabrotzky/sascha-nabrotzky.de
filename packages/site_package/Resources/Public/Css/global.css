@@ -152,10 +152,6 @@ body {
     font-style: normal;
 }
 
-.extended-main-wrapper {
-    flex: 1;
-}
-
 li {
     list-style-type: none;
 }
