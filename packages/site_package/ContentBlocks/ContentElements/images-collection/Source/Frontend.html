@@ -24,12 +24,13 @@
                             alt="{image-item.header}"
                             cropVariant="default"
                             maxWidth="700"
+                            loading="lazy"
                         />
                     </div>
                 </f:for>
             </f:if>
             <div class="description">
-                <p>{image-item.header}: {image-item.text}</p>
+                <p>{image-item.header} {image-item.text}</p>
             </div>
         </div>
     </f:for>

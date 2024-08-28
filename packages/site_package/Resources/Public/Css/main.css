@@ -6,8 +6,4 @@ main {
     @media (width <= 640px) {
         padding: 1rem;
     }
-
-    [id^='c'] {
-        max-width: 46rem;
-    }
 }

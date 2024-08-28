@@ -31,7 +31,7 @@
     --lh-base: 1.3; /* p */
 
     --color-black: hsl(0, 0%, 25%);
-    --color-sand: hsl(28.42deg 100% 96.27%);
+    --color-sand: hsl(28deg 100% 97.5%);
 }
 
 /* T Y P O G R A P H Y */
@@ -143,8 +143,16 @@ body {
     font-style: normal;
 }
 
+.main-content {
+    flex: 1;
+}
+
 li {
     list-style-type: none;
+}
+
+[id^='c']:not(:has(.ce-right, .ce-center)) {
+    max-width: 46rem;
 }
 
 /* Links */
@@ -176,4 +184,16 @@ figure {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.ce-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+.ce-right .image {
+    text-align: right;
+}
+.ce-center .image {
+    text-align: center;
 }
