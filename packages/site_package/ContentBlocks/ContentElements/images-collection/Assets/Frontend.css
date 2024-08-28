@@ -3,6 +3,10 @@
     grid-template-columns: repeat(auto-fill, minmax(min(600px, 100%), 1fr));
     gap: 2rem 2.5rem;
 
+    &:has(+ *) {
+        margin-bottom: 5rem;
+    }
+
     header {
         display: flex;
         position: relative;
