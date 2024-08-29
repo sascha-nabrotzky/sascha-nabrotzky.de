@@ -99,13 +99,6 @@ page.10 {
           as = privacyNavigation
       }
 
-      31 = menu
-      31 {
-          special = directory
-          special.value = {$site_package.configuration.folder.privacy} // ID of the page where the menu should start
-          as = privacyNavigation
-      }
-
       50 = database-query
       50 {
         table = tt_content

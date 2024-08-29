@@ -3,11 +3,11 @@ languages:
   -
     title: English
     enabled: true
-    locale: en_US.UTF-8
+    locale: en_US
     hreflang: ''
     base: /
     websiteTitle: ''
-    navigationTitle: English
+    navigationTitle: ''
     flag: us
     languageId: 0
   -
@@ -22,5 +22,5 @@ languages:
     fallbacks: ''
     flag: de
     languageId: 1
-rootPageId: 1
+rootPageId: 13
 websiteTitle: 'Sascha Nabrotzky'
