@@ -191,9 +191,12 @@ figure {
     margin: 1rem 0;
 }
 .ce-image img {
-    width: 100%;
     max-width: 600px;
     height: auto;
+
+    @media (width <= 390px) {
+        width: 100%;
+    }
 }
 .ce-right .image {
     text-align: right;
