@@ -194,7 +194,7 @@ figure {
     max-width: 600px;
     height: auto;
 
-    @media (width <= 390px) {
+    @media (width <= 600px) {
         width: 100%;
     }
 }
