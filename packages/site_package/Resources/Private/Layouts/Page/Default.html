@@ -1,8 +1,16 @@
-<f:render partial="MainNavigation" arguments="{_all}" />
+<f:if condition="{data.media}">
+    <f:then>
+        <f:asset.css identifier="lib-bg-image">
+            body { background-image: url('{f:cObject(typoscriptObjectPath:
+            'lib.headerimage')}'); background-repeat: no-repeat;
+            background-size: 25% auto; background-position: top right; }
+        </f:asset.css>
+    </f:then>
+</f:if>
 
+<f:render partial="MainNavigation" arguments="{_all}" />
 <section>
     <f:render section="Extended" />
     <f:render section="Main" />
 </section>
-
 <f:render section="Footer" />

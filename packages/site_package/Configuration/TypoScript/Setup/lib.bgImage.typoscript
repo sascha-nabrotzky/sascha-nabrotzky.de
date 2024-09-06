@@ -1,0 +1,14 @@
+lib.headerimage = FILES
+lib.headerimage {
+    references {
+        table = pages
+        data = levelmedia: -1, slide
+        fieldName = media
+    }
+    begin = 0
+    maxItems = 1
+    renderObj = TEXT
+    renderObj {
+        data = file:current:publicUrl
+    }
+}
