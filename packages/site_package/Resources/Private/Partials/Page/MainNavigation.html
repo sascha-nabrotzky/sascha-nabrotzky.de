@@ -3,8 +3,8 @@
         <f:link.page
             pageUid="{startpage_id}"
             class="nav-item {f:if(condition: '{startpage_id} == {data.uid}', then: 'active')}"
-            >Startseite</f:link.page
-        >
+            ><f:translate key="navlinks.homepage" extensionName="site_package"
+        /></f:link.page>
         <f:for each="{mainNavigation}" as="mainNavItem">
             <a
                 href="{mainNavItem.link}"
