@@ -1,6 +1,0 @@
-.language-switcher {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    font-size: var(--fs-lg);
-}

@@ -2,7 +2,7 @@ footer {
     margin-top: auto;
     padding: 2rem;
     width: 100%;
-    max-width: 90rem;
+    max-width: var(--max-width);
     font-size: var(--fs-lg);
     margin-inline: auto;
 

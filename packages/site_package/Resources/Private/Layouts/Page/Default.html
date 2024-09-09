@@ -1,17 +1,14 @@
 <f:if condition="{data.media}">
-    <f:then>
-        <f:asset.css identifier="lib-bg-image">
-            body { background-image: url('{f:cObject(typoscriptObjectPath:
-            'lib.headerimage')}'); background-repeat: no-repeat;
-            background-size: 25% auto; background-position: top right; }
-        </f:asset.css>
-    </f:then>
+    <f:asset.css identifier="lib-bg-image">
+        body { background-image: url('{f:cObject(typoscriptObjectPath:
+        'lib.headerimage')}'); background-repeat: no-repeat; background-size:
+        25% auto; background-position: top right; }
+    </f:asset.css>
 </f:if>
-<f:debug inline="1">{_all}</f:debug>
-<f:render partial="MainNavigation" arguments="{_all}" />
-<f:render partial="LanguageSwitcher" arguments="{_all}" />
-<section>
-    <f:render section="Extended" />
-    <f:render section="Main" />
+<section class="top-navigations">
+    <f:render partial="MainNavigation" arguments="{_all}" />
+    <f:render partial="LanguageNavigation" arguments="{_all}" />
 </section>
+<f:render section="Extended" />
+<f:render section="Main" />
 <f:render section="Footer" />
