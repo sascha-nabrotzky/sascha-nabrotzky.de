@@ -1,0 +1,20 @@
+
+<f:if condition="{languageNavigation}">
+    <div class="language-switcher"></div>
+            <f:for each="{languageNavigation}" as="item">
+                <div class="language-switcher {f:if(condition: item.active, then: 'active')} {f:if(condition: item.available, else: 'text-muted')}">
+                    <f:if condition="{item.available}">
+                        <f:then>
+                            <a href="{item.link}" hreflang="{item.hreflang}" title="{item.title}">
+                                <span>{item.navigationTitle}</span>
+                            </a>
+                        </f:then>
+                        <f:else>
+                            <span>{item.navigationTitle}</span>
+                        </f:else>
+                    </f:if>
+                </div>
+            </f:for>
+    </div>
+</f:if>
+

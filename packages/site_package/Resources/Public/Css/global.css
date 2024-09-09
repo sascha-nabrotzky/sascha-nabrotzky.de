@@ -65,6 +65,10 @@ h1 {
         font-size: 18vw;
         margin-bottom: 0.5rem;
     }
+
+    + h2 {
+        margin-bottom: 1rem;
+    }
 }
 h2 {
     font-size: var(--fs-4xl);
@@ -163,6 +167,10 @@ li {
 }
 
 /* Links */
+button {
+    border: none;
+    background-color: unset;
+}
 a {
     color: inherit;
     text-underline-offset: 0.3rem;

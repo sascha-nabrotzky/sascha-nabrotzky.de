@@ -19,7 +19,7 @@ languages:
     websiteTitle: ''
     navigationTitle: Deutsch
     fallbackType: strict
-    fallbacks: ''
+    fallbacks: '0'
     flag: de
     languageId: 1
 rootPageId: 13

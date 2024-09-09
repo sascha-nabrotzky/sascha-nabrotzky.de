@@ -92,6 +92,12 @@ page.10 {
          as = mainNavigation
       }
 
+      20 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+      20 {
+        languages = auto
+        as = languageNavigation
+      }
+
       30 = menu
       30 {
           special = directory
