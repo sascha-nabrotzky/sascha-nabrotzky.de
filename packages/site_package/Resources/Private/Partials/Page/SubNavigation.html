@@ -1,0 +1,12 @@
+<f:if condition="{subNavigation}">
+    <nav class="sub-nav">
+        <f:for each="{subNavigation}" as="subNavItem">
+            <f:link.page
+                pageUid="{subNavItem.data.uid}"
+                class="nav-item {f:if(condition: subNavItem.active, then: 'active')}"
+            >
+                {subNavItem.title}
+            </f:link.page>
+        </f:for>
+    </nav>
+</f:if>

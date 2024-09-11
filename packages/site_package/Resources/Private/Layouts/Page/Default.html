@@ -5,10 +5,13 @@
         25% auto; background-position: top right; }
     </f:asset.css>
 </f:if>
-<section class="top-navigations">
-    <f:render partial="MainNavigation" arguments="{_all}" />
-    <f:render partial="LanguageNavigation" arguments="{_all}" />
-</section>
+<header>
+    <div class="header-navigations">
+        <f:render partial="MainNavigation" arguments="{_all}" />
+        <f:render partial="LanguageNavigation" arguments="{_all}" />
+    </div>
+    <f:render partial="SubNavigation" arguments="{_all}" />
+</header>
 <f:render section="Extended" />
 <f:render section="Main" />
 <f:render section="Footer" />

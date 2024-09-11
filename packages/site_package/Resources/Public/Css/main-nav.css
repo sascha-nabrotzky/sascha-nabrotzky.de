@@ -1,17 +1,17 @@
-.top-navigations {
+.header-navigations {
     display: flex;
-    max-width: var(--max-width);
-    margin-inline: auto;
-    width: 100%;
     justify-content: space-between;
     padding: 2rem;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
 
     @media (width <= 640px) {
         flex-direction: row;
-        justify-content: space-between;
         align-items: flex-start;
-        row-gap: 0.5rem;
+        justify-content: space-between;
         padding: 1rem;
+        row-gap: 0.5rem;
     }
 }
 
@@ -27,17 +27,25 @@
     }
 }
 
-.language-navigation {
+.sub-nav {
+    display: flex;
+    padding: 0 2rem 2rem;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+}
+
+.lang-nav {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    gap: 1rem;
     font-size: var(--fs-lg);
+    gap: 1rem;
 
     @media (width <= 640px) {
         flex-direction: column;
-        row-gap: 0.5rem;
         padding: 1rem;
         text-align: right;
+        row-gap: 0.5rem;
     }
 }

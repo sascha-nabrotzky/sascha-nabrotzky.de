@@ -6,14 +6,12 @@
             ><f:translate key="navlinks.homepage" extensionName="site_package"
         /></f:link.page>
         <f:for each="{mainNavigation}" as="mainNavItem">
-            <a
-                href="{mainNavItem.link}"
-                target="{mainNavItem.target}"
-                title="{mainNavItem.title}"
+            <f:link.page
+                pageUid="{mainNavItem.data.uid}"
                 class="nav-item {f:if(condition: mainNavItem.active, then: 'active')}"
             >
                 {mainNavItem.title}
-            </a>
+            </f:link.page>
         </f:for>
     </nav>
 </f:if>

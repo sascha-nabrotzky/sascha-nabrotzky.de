@@ -87,9 +87,16 @@ page.10 {
   dataProcessing {
       10 = menu
       10 {
-         levels = 2
+         levels = 1
          includeSpacer = 1
          as = mainNavigation
+      }
+
+      15 = menu
+      15 {
+          entryLevel = 1
+          includeSpacer = 1
+          as = subNavigation
       }
 
       20 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
