@@ -19,20 +19,28 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 2.5rem;
+    rotate: -2deg;
 
     @media (width <= 640px) {
         flex-direction: column;
         row-gap: 0.5rem;
-        padding: 1rem;
     }
 }
 
 .sub-nav {
     display: flex;
-    padding: 0 2rem 2rem;
+    flex-wrap: wrap;
+    padding: 0 3rem 2rem;
     width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
+    column-gap: 1.5rem;
+
+    @media (width <= 640px) {
+        flex-direction: column;
+        row-gap: 0.5rem;
+        padding: 0 2rem 1rem;
+    }
 }
 
 .lang-nav {
