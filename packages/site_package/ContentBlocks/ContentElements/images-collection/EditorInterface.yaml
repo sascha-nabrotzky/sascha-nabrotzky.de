@@ -17,7 +17,7 @@ fields:
       - identifier: image
         useExistingField: true
         label: Bild
-        allowed: jpeg,jpg,png
+        allowed: jpeg,jpg,png,webp
         maxitems: 1
         type: File
       - identifier: header
