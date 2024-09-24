@@ -14,13 +14,6 @@
 :root {
     --ff-handwriting: 'Reenie Beanie', sans-serif;
 
-    --brkp-sm: 640px;
-    --brkp-md: 768px;
-    --brkp-lg: 1024px;
-    --brkp-xl: 1280px;
-    --brkp-2xl: 1536px;
-    --brkp-3xl: 1920px;
-
     --fs-xs: 0.563rem;
     --fs-sm: 0.75rem; /* small */
     --fs-base: 1rem; /*  p */
@@ -224,4 +217,18 @@ figure {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+/* ******************* *
+*       Animations     *
+*  ******************* */
+.frame-slide-in-right {
+    transform: translateX(3rem);
+    opacity: 0;
+    transition: transform 600ms, opacity 600ms;
+}
+
+.appear {
+    transform: translateX(0rem);
+    opacity: 1;
 }

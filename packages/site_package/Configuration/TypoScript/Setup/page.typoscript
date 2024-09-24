@@ -33,6 +33,7 @@ page {
   }
 
   includeJSFooter {
+    slide-in-right = EXT:site_package/Resources/Public/JavaScript/slide-in-right.js
   }
 
   bodyTagCObject = TEXT

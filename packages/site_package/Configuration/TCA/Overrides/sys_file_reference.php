@@ -10,18 +10,22 @@ $GLOBALS['TCA'][$table]['columns'][$field]['config'] = [
         'default' => [
             'title' => 'Default',
             'allowedAspectRatios' => [
-                 'Quer' => [
-                     'title' => 'Querformat',
+                 '16:9' => [
+                     'title' => '16:9',
                      'value' => 16 / 9
                  ],
-                 'Hoch' => [
-                     'title' => 'Hochformat',
-                     'value' => 1 / 1.41
-                 ],
+                 '3:4' => [
+                    'title' => '3:4',
+                    'value' => 3 / 4
+                ],
                  '1:1' => [
                     'title' => '1:1',
                     'value' => 1 / 1
                 ],
+                'DIN Hoch' => [
+                     'title' => 'DIN Hoch',
+                     'value' => 1 / 1.41
+                 ],
                  'Frei' => [
                      'title' => 'Frei',
                      'value' => 0.0

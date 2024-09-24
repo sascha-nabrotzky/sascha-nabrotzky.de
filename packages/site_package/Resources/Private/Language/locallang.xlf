@@ -16,6 +16,9 @@
             <trans-unit id="navlinks.homepage" xml:space="preserve">
                 <source>Home</source>
             </trans-unit>
+           <trans-unit id="slide-in-right" xml:space="preserve">
+                <source>Slide in from right</source>
+            </trans-unit>
         </body>
    </file>
 </xliff>
