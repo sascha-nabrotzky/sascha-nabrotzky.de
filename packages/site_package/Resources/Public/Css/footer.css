@@ -15,3 +15,7 @@ footer {
         gap: 2rem;
     }
 }
+
+.copyright {
+    text-align: center;
+}
