@@ -1,0 +1,26 @@
+.frame-type-form_formframework {
+    input,
+    textarea {
+        width: 100%;
+    }
+
+    input {
+        padding: 0.5rem 1rem;
+    }
+
+    textarea {
+        min-height: 10rem;
+    }
+
+    .form-group {
+        margin-top: 1rem;
+    }
+
+    .actions {
+        margin-top: 3rem;
+    }
+
+    fieldset {
+        background-color: var(--color-white);
+    }
+}
