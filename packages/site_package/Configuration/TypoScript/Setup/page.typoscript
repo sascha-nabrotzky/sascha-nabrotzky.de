@@ -34,6 +34,7 @@ page {
 
   includeJSFooter {
     slide-in-right = EXT:site_package/Resources/Public/JavaScript/slide-in-right.js
+    to-top-button = EXT:site_package/Resources/Public/JavaScript/to-top-button.js
   }
 
   bodyTagCObject = TEXT

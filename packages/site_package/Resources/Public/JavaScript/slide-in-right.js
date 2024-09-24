@@ -1,4 +1,6 @@
 window.addEventListener('load', (event) => {
-    const element = document.querySelector('.frame-slide-in-right');
-    setTimeout(element.classList.add('appear'), 600);
+    if (document.querySelector('.frame-slide-in-right')) {
+        const element = document.querySelector('.frame-slide-in-right');
+        setTimeout(element.classList.add('appear'), 600);
+    }
 });

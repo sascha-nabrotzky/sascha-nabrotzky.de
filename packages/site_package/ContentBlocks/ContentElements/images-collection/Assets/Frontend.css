@@ -26,7 +26,7 @@
             bottom: 50%;
             left: 0;
             z-index: 0;
-            border-top: 4px dotted var(--color-black);
+            border-top: 3px dotted var(--color-black);
 
             @media (width <= 640px) {
                 bottom: 0;
