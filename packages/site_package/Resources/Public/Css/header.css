@@ -1,17 +1,24 @@
-.main-header > div {
-    display: flex;
-    justify-content: space-between;
+.main-header {
     padding: 2rem;
-    width: 100%;
-    max-width: var(--max-width);
-    margin-inline: auto;
 
     @media (width <= 640px) {
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
         padding: 1rem;
-        row-gap: 0.5rem;
+    }
+
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        width: 100%;
+        max-width: var(--max-width);
+        margin-inline: auto;
+
+        @media (width <= 640px) {
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            row-gap: 0.5rem;
+        }
     }
 }
 
@@ -29,8 +36,9 @@
 
 .sub-nav {
     display: flex;
+    position: relative;
     flex-wrap: wrap;
-    padding: 0 3rem 2rem;
+    padding-left: 3rem;
     width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
@@ -39,7 +47,17 @@
     @media (width <= 640px) {
         flex-direction: column;
         row-gap: 0.5rem;
-        padding: 0 2rem 1rem;
+        padding-left: 2.5rem;
+        margin-block: 0 1rem;
+
+        &:after {
+            content: '2. Type';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            translate: -1.5rem -50%;
+            rotate: -90deg;
+        }
     }
 }
 
@@ -52,7 +70,6 @@
 
     @media (width <= 640px) {
         flex-direction: column;
-        padding: 1rem;
         text-align: right;
         row-gap: 0.5rem;
     }

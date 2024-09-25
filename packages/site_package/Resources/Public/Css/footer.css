@@ -16,6 +16,17 @@ footer {
     }
 }
 
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    column-gap: 2rem;
+
+    @media (width <= 640px) {
+        margin-bottom: 1rem;
+    }
+}
+
 .copyright {
     text-align: center;
 }

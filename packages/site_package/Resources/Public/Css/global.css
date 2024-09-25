@@ -35,12 +35,12 @@
     --color-orange: hsl(39, 100%, 50%);
 
     /* Semantic */
-    --call-to-action: var(--color-orange);
-    --cancel: var(--color-black);
+    --color-call-to-action: var(--color-orange);
+    --color-secondary: var(--color-black);
 
     /* Components */
-    --btn-call-to-action: var(--call-to-action);
-    --btn-cancel: var(--cancel);
+    --btn-call-to-action: var(--color-call-to-action);
+    --btn-cancel: var(--color-secondary);
 
     --max-width: 90rem;
 }

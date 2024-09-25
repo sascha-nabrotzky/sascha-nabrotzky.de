@@ -14,9 +14,9 @@ $GLOBALS['TCA'][$table]['columns'][$field]['config'] = [
                      'title' => '16:9',
                      'value' => 16 / 9
                  ],
-                 '3:4' => [
-                    'title' => '3:4',
-                    'value' => 3 / 4
+                 '4:3' => [
+                    'title' => '4:3',
+                    'value' => 4 / 3
                 ],
                  '1:1' => [
                     'title' => '1:1',
