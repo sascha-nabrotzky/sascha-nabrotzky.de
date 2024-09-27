@@ -1,4 +1,4 @@
-body[data-pid='16'] main {
+body[data-page='legal'] main {
     font-family: var(--ff-sans);
 
     h1 {

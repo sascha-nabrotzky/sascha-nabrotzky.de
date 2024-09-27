@@ -49,7 +49,7 @@ page {
   }
 
   [page["pid"] == {$site_package.configuration.folder.privacy}]
-    page.bodyTagAdd = data-pid='{$site_package.configuration.folder.privacy}'
+    page.bodyTagAdd = data-page='legal'
   [end]
 
   shortcutIcon = EXT:site_package/Resources/Public/Icons/favicon.ico
