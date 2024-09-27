@@ -1,0 +1,25 @@
+body[data-pid='16'] main {
+    font-family: var(--ff-sans);
+
+    h1 {
+        font-size: var(--fs-2xl);
+    }
+    h2 {
+        font-size: var(--fs-xl);
+        margin-top: 2rem;
+    }
+    h3 {
+        font-size: var(--fs-lg);
+        margin-top: 2rem;
+        line-height: var(--lh-base);
+    }
+    p,
+    ul {
+        font-size: var(--fs-base);
+        line-height: var(--lh-base);
+    }
+    li {
+        list-style-type: disc;
+        margin-top: 0.5rem;
+    }
+}

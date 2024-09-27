@@ -13,6 +13,7 @@
 
 :root {
     --ff-handwriting: 'Reenie Beanie', sans-serif;
+    --ff-sans: Helvetica, Arial, sans-serif;
 
     --fs-xs: 0.563rem;
     --fs-sm: 0.75rem; /* small */

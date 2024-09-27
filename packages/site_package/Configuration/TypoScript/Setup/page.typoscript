@@ -48,6 +48,10 @@ page {
     wrap = <body data-layout="|">
   }
 
+  [page["pid"] == {$site_package.configuration.folder.privacy}]
+    page.bodyTagAdd = data-pid='{$site_package.configuration.folder.privacy}'
+  [end]
+
   shortcutIcon = EXT:site_package/Resources/Public/Icons/favicon.ico
 
 }
