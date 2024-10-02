@@ -24,7 +24,11 @@ $GLOBALS['TCA'][$table]['columns'][$field]['config'] = [
                 ],
                 'DIN Hoch' => [
                      'title' => 'DIN Hoch',
-                     'value' => 1 / 1.41
+                     'value' => 5 / 7
+                 ],
+                'DIN Quer' => [
+                     'title' => 'DIN Quer',
+                     'value' => 7 / 5
                  ],
                  'Frei' => [
                      'title' => 'Frei',
