@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "friendsoftypo3/content-blocks": "0.8.2",
+        "friendsoftypo3/content-blocks": "1.0.4",
         "sn/site-package": "^1.0",
         "typo3/cms-backend": "^13.4",
         "typo3/cms-belog": "^13.4",
