@@ -49,15 +49,6 @@
         row-gap: 0.5rem;
         padding-left: 2.5rem;
         margin-block: 0 1rem;
-
-        &:after {
-            content: '2. Type';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            translate: -1.5rem -50%;
-            rotate: -90deg;
-        }
     }
 }
 
