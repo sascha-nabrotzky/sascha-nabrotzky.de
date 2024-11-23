@@ -26,7 +26,6 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 2.5rem;
-    rotate: -2deg;
 
     @media (width <= 640px) {
         flex-direction: column;
@@ -37,17 +36,17 @@
 .sub-nav {
     display: flex;
     position: relative;
+    justify-content: center;
     flex-wrap: wrap;
-    padding-left: 3rem;
+    column-gap: 1.5rem;
     width: 100%;
     max-width: var(--max-width);
+    border-block: 2px dotted var(--color-black);
     margin-inline: auto;
-    column-gap: 1.5rem;
+    padding-block: 0.5rem;
 
     @media (width <= 640px) {
-        flex-direction: column;
         row-gap: 0.5rem;
-        padding-left: 2.5rem;
         margin-block: 0 1rem;
     }
 }

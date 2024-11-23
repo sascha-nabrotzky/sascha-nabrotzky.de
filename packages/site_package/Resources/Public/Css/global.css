@@ -168,10 +168,6 @@ li {
     list-style-type: none;
 }
 
-[id^='c']:not(:has(.ce-right, .ce-center)) {
-    max-width: 46rem;
-}
-
 .text-muted {
     opacity: 0.5;
 }
@@ -260,4 +256,19 @@ figure {
 .appear {
     transform: translateX(0rem);
     opacity: 1;
+}
+
+/* ******************* *
+*      CE-Elements     *
+*  ******************* */
+
+.ce-headline-center {
+    text-align: center;
+}
+.frame-shorter-width {
+    max-width: 46rem;
+}
+.frame-shorter-width-center {
+    max-width: 46rem;
+    margin-inline: auto;
 }

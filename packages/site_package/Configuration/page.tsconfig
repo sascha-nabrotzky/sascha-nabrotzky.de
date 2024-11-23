@@ -10,5 +10,7 @@ TCEFORM.tt_content.frame_class {
    removeItems = ruler-before,ruler-after,indent,indent-left,indent-right,none
    addItems {
       slide-in-right = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:slide-in-right
+      shorter-width = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:shorter-width
+      shorter-width-center = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:shorter-width-center
    }
 }

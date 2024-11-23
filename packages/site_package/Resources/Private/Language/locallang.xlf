@@ -19,6 +19,12 @@
            <trans-unit id="slide-in-right" xml:space="preserve">
                 <source>Slide in from right</source>
             </trans-unit>
+            <trans-unit id="shorter-width" xml:space="preserve">
+                <source>Shorter Width</source>
+            </trans-unit>
+            <trans-unit id="shorter-width-center" xml:space="preserve">
+                <source>Shorter Width Center</source>
+            </trans-unit>
         </body>
    </file>
 </xliff>
