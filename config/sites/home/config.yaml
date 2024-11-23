@@ -1,11 +1,9 @@
 base: /
-dependencies:
-  - typo3/seo-sitemap
 languages:
   -
     title: English
     enabled: true
-    locale: en_US
+    locale: en-US
     hreflang: ''
     base: /
     websiteTitle: ''
@@ -21,8 +19,8 @@ languages:
     websiteTitle: ''
     navigationTitle: Deutsch
     fallbackType: strict
-    fallbacks: '0'
+    fallbacks: ''
     flag: de
     languageId: 1
-rootPageId: 1
-websiteTitle: 'Sascha Nabrotzky'
+rootPageId: 13
+websiteTitle: ''
