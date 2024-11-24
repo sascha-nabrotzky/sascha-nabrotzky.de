@@ -64,5 +64,15 @@
                 margin: 0;
             }
         }
+
+        .more-link {
+            display: flex;
+            column-gap: 0.5rem;
+            margin-left: auto;
+
+            svg {
+                width: 1rem;
+            }
+        }
     }
 }

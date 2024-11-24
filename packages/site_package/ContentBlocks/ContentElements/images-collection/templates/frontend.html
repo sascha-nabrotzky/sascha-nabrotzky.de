@@ -27,11 +27,28 @@
                             loading="lazy"
                         />
                     </div>
+                    <f:if condition="{image.link}">
+                        <f:link.typolink
+                            parameter="{image.link}"
+                            class="more-link"
+                        >
+                            <f:translate
+                                key="navlinks.more"
+                                extensionName="site_package"
+                            />
+                            <f:cObject
+                                typoscriptObjectPath="lib.inlineSvg"
+                                data="{src:'EXT:site_package/Resources/Public/Icons/arrow-right-link.svg'}"
+                            />
+                        </f:link.typolink>
+                    </f:if>
                 </f:for>
             </f:if>
-            <div class="description">
-                <p>{collection-item.header} {collection-item.text}</p>
-            </div>
+            <f:if condition="{collection-item.header}">
+                <div class="description">
+                    <p>{collection-item.header} {collection-item.text}</p>
+                </div>
+            </f:if>
         </div>
     </f:for>
 </div>
