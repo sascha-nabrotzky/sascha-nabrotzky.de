@@ -223,10 +223,9 @@ figure {
     margin: 1rem 0;
 }
 .ce-image img {
-    max-width: 600px;
     height: auto;
 
-    @media (width <= 600px) {
+    @media (width <= 800px) {
         width: 100%;
     }
 }
