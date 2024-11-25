@@ -8,8 +8,8 @@
                 <target>Startseite</target>
             </trans-unit>
             <trans-unit id="navlinks.more" xml:space="preserve">
-                <source>More</source>
-                <target>Mehr</target>
+                <source>More Infos</source>
+                <target>Mehr Infos</target>
             </trans-unit>
             <trans-unit id="slide-in-right" xml:space="preserve">
                 <source>Slide in from right</source>

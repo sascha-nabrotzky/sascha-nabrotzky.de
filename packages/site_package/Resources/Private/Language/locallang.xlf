@@ -17,7 +17,7 @@
                 <source>Home</source>
             </trans-unit>
             <trans-unit id="navlinks.more" xml:space="preserve">
-                <source>More</source>
+                <source>More Infos</source>
             </trans-unit>
            <trans-unit id="slide-in-right" xml:space="preserve">
                 <source>Slide in from right</source>
