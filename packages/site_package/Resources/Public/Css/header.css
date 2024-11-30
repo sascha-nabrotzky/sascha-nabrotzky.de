@@ -1,5 +1,8 @@
 .main-header {
     padding: 2rem;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
 
     @media (width <= 640px) {
         padding: 1rem;
@@ -8,10 +11,6 @@
     & > div {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
-        width: 100%;
-        max-width: var(--max-width);
-        margin-inline: auto;
 
         @media (width <= 640px) {
             flex-direction: row;
@@ -36,9 +35,10 @@
 .sub-nav {
     display: flex;
     position: relative;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 1.5rem;
+    margin-block: 1rem;
     width: 100%;
     max-width: var(--max-width);
     border-block: 2px dotted var(--color-black);
@@ -47,7 +47,6 @@
 
     @media (width <= 640px) {
         row-gap: 0.5rem;
-        margin-block: 0 1rem;
     }
 }
 
