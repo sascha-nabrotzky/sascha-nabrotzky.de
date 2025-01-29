@@ -1,7 +1,6 @@
 .images-collection {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
-    gap: 2rem 2.5rem;
 
     &:has(+ *) {
         margin-bottom: 5rem;
@@ -14,8 +13,13 @@
         justify-content: center;
         text-align: center;
 
+        @media (width <= 640px) {
+            margin-bottom: 2rem;
+        }
+
         .headline {
             z-index: 1;
+            margin-bottom: 1rem;
             background-color: var(--color-sand);
             padding-inline: 1rem;
         }
@@ -38,10 +42,11 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
+        background-color: var(--color-white);
 
         .image-wrapper {
-            margin-bottom: 0.5rem;
+            margin-block: auto;
 
             img {
                 width: 100%;
@@ -53,12 +58,12 @@
 
         .description {
             position: absolute;
-            bottom: 0;
-            border-radius: 0.3rem 0.3rem 0 0;
-            background-color: var(--color-sand);
-            padding: 0.5rem 1rem 0;
-            text-align: center;
-            margin-inline: 0.5rem;
+            bottom: 1rem;
+            background-color: var(--color-white);
+            padding: 0.25rem 1rem 0.1rem;
+            backdrop-filter: blur(2px);
+            border-block: 1px solid var(--color-black);
+            box-shadow: 3px 3px 8px var(--color-shadow-default);
 
             p {
                 margin: 0;
@@ -68,7 +73,14 @@
         .more-link {
             display: flex;
             column-gap: 0.5rem;
-            margin-left: auto;
+            position: absolute;
+            bottom: 1rem;
+            right: 0;
+            background-color: var(--color-white);
+            padding: 0.25rem 1rem 0.1rem;
+            backdrop-filter: blur(2px);
+            border-block: 1px solid var(--color-black);
+            box-shadow: -3px 3px 8px var(--color-shadow-default);
 
             svg {
                 width: 1rem;
