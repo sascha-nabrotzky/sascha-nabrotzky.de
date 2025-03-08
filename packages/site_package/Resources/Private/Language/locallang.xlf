@@ -28,6 +28,9 @@
             <trans-unit id="shorter-width-center" xml:space="preserve">
                 <source>Shorter Width Center</source>
             </trans-unit>
+            <trans-unit id="hero-headline" xml:space="preserve">
+                <source>Hero Headline</source>
+            </trans-unit>
         </body>
    </file>
 </xliff>

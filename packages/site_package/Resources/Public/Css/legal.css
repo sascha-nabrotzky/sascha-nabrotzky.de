@@ -1,6 +1,4 @@
 body[data-page='legal'] main {
-    font-family: var(--ff-sans);
-
     h1 {
         font-size: var(--fs-2xl);
     }

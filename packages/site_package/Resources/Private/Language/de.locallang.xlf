@@ -23,6 +23,10 @@
                 <source>Shorter Width Center</source>
                 <target>Kürzere breite zentriert</target>
             </trans-unit>
+            <trans-unit id="shorter-width-center" xml:space="preserve">
+                <source>Hero Headline</source>
+                <target>Hero Überschrift</target>
+            </trans-unit>
         </body>
    </file>
 </xliff>

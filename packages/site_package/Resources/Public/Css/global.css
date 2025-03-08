@@ -1,10 +1,10 @@
-/* reenie-beanie-regular - latin */
+/* oswald-regular - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Reenie Beanie';
+    font-family: 'Oswald';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/ReenieBeanie-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+    src: url('../fonts/oswald-v53-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* ******************* *
@@ -12,28 +12,29 @@
 *  ******************* */
 
 :root {
-    --ff-handwriting: 'Reenie Beanie', sans-serif;
-    --ff-sans: Helvetica, Arial, sans-serif;
+    --ff-sans-headline: 'Oswald', sans-serif;
+    --ff-sans: 'Inter', 'Roboto', 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans',
+        Arial, sans-serif;
 
-    --fs-xs: 0.563rem;
-    --fs-sm: 0.75rem; /* small */
+    --fs-xs: 0.64rem; /* extra-small */
+    --fs-sm: 0.8rem; /* small */
     --fs-base: 1rem; /*  p */
-    --fs-lg: 1.333rem; /* h6 */
-    --fs-xl: 1.777rem; /* h5 */
-    --fs-2xl: 2.369rem; /* h4 */
-    --fs-3xl: 3.157rem; /* h3 */
-    --fs-4xl: 4.209rem; /* h2 */
-    --fs-5xl: 5.61rem; /* h1 */
+    --fs-lg: 1.25rem; /* h6 */
+    --fs-xl: 1.563rem; /* h5 */
+    --fs-2xl: 1.953rem; /* h4 */
+    --fs-3xl: 2.441rem; /* h3 */
+    --fs-4xl: 3.052rem; /* h2 */
+    --fs-5xl: 3.815rem; /* h1 */
 
     --lh-xs: 0.9;
     --lh-sm: 1.1;
-    --lh-base: 1.3; /* p */
+    --lh-base: 1.5; /* p */
 
     /* Primitives */
     --color-black: hsl(0, 0%, 25%);
     --color-black-10-transp: hsl(0, 0%, 25%, 0.1);
     --color-white: hsl(0, 0%, 100%);
-    --color-sand: hsl(28deg 100% 97.5%);
+    --color-sand: hsl(30, 26%, 93%);
     --color-orange: hsl(39, 100%, 50%);
 
     /* Semantic */
@@ -45,7 +46,8 @@
     --btn-call-to-action: var(--color-call-to-action);
     --btn-cancel: var(--color-secondary);
 
-    --max-width: 90rem;
+    --w-xl: 90rem;
+    --w-lg: 50rem;
 }
 
 /* ******************* *
@@ -59,6 +61,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: var(--ff-sans-headline);
     margin: 0 0 0.5rem 0;
     word-break: break-word;
     hyphens: auto;
@@ -67,7 +70,6 @@ h6 {
 }
 h1 {
     font-size: var(--fs-5xl);
-    line-height: var(--lh-xs);
 
     @media (width <= 640px) {
         font-size: 18vw;
@@ -80,7 +82,6 @@ h1 {
 }
 h2 {
     font-size: var(--fs-4xl);
-    line-height: var(--lh-xs);
 
     @media (width <= 640px) {
         font-size: 15vw;
@@ -89,7 +90,6 @@ h2 {
 }
 h3 {
     font-size: var(--fs-3xl);
-    line-height: var(--lh-xs);
     margin-bottom: 0.5rem;
 }
 h4 {
@@ -104,12 +104,11 @@ h6 {
 
 /* Bodytext */
 body {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-base);
     line-height: var(--lh-base);
 }
 p {
     margin-block: 0 0.5rem;
-    line-height: var(--lh-sm);
 }
 small {
     font-size: var(--fs-sm);
@@ -162,7 +161,7 @@ body {
     background-color: var(--color-sand);
     min-height: 100svh;
     color: var(--color-black);
-    font-family: var(--ff-handwriting);
+    font-family: var(--ff-sans);
     font-style: normal;
 }
 
@@ -279,4 +278,22 @@ figure {
 .frame-shorter-width-center {
     max-width: 46rem;
     margin-inline: auto;
+}
+.frame-hero-headline {
+    > header {
+        font-family: var(--ff-cursive);
+        text-transform: uppercase;
+
+        h1 {
+            font-size: clamp(5vw, 10vw, 11rem);
+            margin-bottom: 0;
+        }
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+    p {
+        max-width: var(--w-lg);
+        margin-inline: auto;
+    }
 }

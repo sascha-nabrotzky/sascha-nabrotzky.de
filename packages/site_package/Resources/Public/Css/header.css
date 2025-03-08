@@ -1,7 +1,7 @@
 .main-header {
     padding: 2rem;
     width: 100%;
-    max-width: var(--max-width);
+    max-width: var(--w-xl);
     margin-inline: auto;
 
     @media (width <= 640px) {
@@ -40,7 +40,7 @@
     column-gap: 1.5rem;
     margin-block: 1rem;
     width: 100%;
-    max-width: var(--max-width);
+    max-width: var(--w-xl);
     border-block: 2px dotted var(--color-black);
     margin-inline: auto;
     padding-block: 0.5rem;
@@ -54,12 +54,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    font-size: var(--fs-lg);
+    font-size: var(--fs-sm);
     gap: 1rem;
 
     @media (width <= 640px) {
-        flex-direction: column;
         text-align: right;
-        row-gap: 0.5rem;
     }
 }

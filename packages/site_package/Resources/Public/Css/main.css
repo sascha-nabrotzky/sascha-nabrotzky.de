@@ -1,6 +1,6 @@
 main {
     padding: 2rem;
-    max-width: var(--max-width);
+    max-width: var(--w-xl);
     margin-inline: auto;
     width: 100%;
 

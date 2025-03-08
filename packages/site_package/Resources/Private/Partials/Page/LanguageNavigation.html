@@ -9,11 +9,11 @@
                         title="{item.title}"
                         class="{f:if(condition: item.active, then: 'active')}"
                     >
-                        {item.navigationTitle}
+                        {item.twoLetterIsoCode}
                     </a>
                 </f:then>
                 <f:else>
-                    <span class="text-muted">{item.navigationTitle}</span>
+                    <span class="text-muted">{item.twoLetterIsoCode}</span>
                 </f:else>
             </f:if>
         </f:for>
