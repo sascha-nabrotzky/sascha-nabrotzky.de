@@ -46,8 +46,13 @@
 
 body {
     font-family: var(--ff-sans);
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
     font-size: var(--fs-base);
     line-height: var(--lh-base);
+}
+
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
 }
 
 /* Headlines */
