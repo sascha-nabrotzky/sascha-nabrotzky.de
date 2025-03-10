@@ -159,8 +159,6 @@ body {
     background-color: var(--color-sand);
     min-height: 100svh;
     color: var(--color-black);
-    font-family: var(--ff-sans);
-    font-style: normal;
 }
 
 li {
