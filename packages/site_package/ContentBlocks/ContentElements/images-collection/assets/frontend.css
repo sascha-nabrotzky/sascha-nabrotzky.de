@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
 
-    &:has(+ *) {
-        margin-bottom: 5rem;
+    &:has(+ .images-collection) {
+        margin-bottom: var(--spacing-xl);
     }
 
     header {
@@ -14,7 +14,7 @@
         text-align: center;
 
         @media (width <= 640px) {
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-sm);
         }
 
         .headline {
@@ -27,7 +27,7 @@
         .line {
             position: absolute;
             right: 0;
-            bottom: 50%;
+            bottom: 60%;
             left: 0;
             z-index: 0;
             border-bottom: 3px dotted var(--color-black);
@@ -76,11 +76,10 @@
             position: absolute;
             bottom: 1rem;
             right: 0;
-            background-color: var(--color-white);
+            background-color: var(--color-call-to-action);
             padding: 0.25rem 1rem 0.1rem;
             backdrop-filter: blur(2px);
-            border-block: 1px solid var(--color-black);
-            box-shadow: -3px 3px 8px var(--color-shadow-default);
+            text-decoration: none;
 
             svg {
                 width: 1rem;
