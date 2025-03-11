@@ -244,6 +244,8 @@ figure {
     margin: 1rem 0;
 
     img {
+        width: 100%;
+        max-width: 800px;
         height: auto;
     }
 }
