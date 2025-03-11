@@ -1,19 +1,9 @@
-/* inter-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
+    font-family: InterVariable;
     font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* inter-600 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/inter-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    font-weight: 100 600;
+    font-display: swap;
+    src: url('../fonts/InterVariable.woff2') format('woff2');
 }
 
 /* ******************* *
@@ -21,8 +11,8 @@
 *  ******************* */
 
 :root {
-    --ff-sans: 'Inter', 'Roboto', 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans',
-        Arial, sans-serif;
+    --ff-sans: 'InterVariable', 'Inter', 'Roboto', 'Helvetica Neue',
+        'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 
     --fs-xs: 0.64rem; /* extra-small */
     --fs-sm: 0.8rem; /* small */
