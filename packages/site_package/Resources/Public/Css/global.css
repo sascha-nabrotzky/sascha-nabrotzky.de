@@ -36,9 +36,9 @@
     --spacing-xl: 5rem;
 
     /* Primitives */
-    --color-black: hsl(0, 0%, 25%);
+    --color-black: hsl(0, 0%, 20%);
     --color-black-10-transp: hsl(0, 0%, 25%, 0.1);
-    --color-white: hsl(0, 0%, 100%);
+    --color-white: hsl(0, 0%, 95%);
     --color-sand: hsl(30, 26%, 93%);
     --color-orange: hsl(39, 100%, 50%);
 
@@ -135,7 +135,7 @@
     body {
         display: flex;
         flex-direction: column;
-        background-color: var(--color-sand);
+        background-color: var(--color-white);
         min-height: 100svh;
         color: var(--color-black);
     }
@@ -315,7 +315,7 @@
                 margin-bottom: 0;
 
                 &:not(:has(~ h2)) {
-                    margin-bottom: var(--spacing-xs);
+                    margin-bottom: var(--spacing-sm);
                 }
             }
             h2 {
