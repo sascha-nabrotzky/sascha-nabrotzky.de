@@ -48,7 +48,7 @@ page {
     wrap = <body data-layout="|">
   }
 
-  shortcutIcon = EXT:site_package/Resources/Public/Icons/favicon.ico
+  shortcutIcon = EXT:site_package/Resources/Public/Icons/favicon.svg
 
   [page["pid"] == {$site_package.configuration.folder.privacy}]
     page.bodyTagAdd = data-page='legal'

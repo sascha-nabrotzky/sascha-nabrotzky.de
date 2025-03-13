@@ -20,7 +20,7 @@
         .headline {
             z-index: 1;
             margin-bottom: 1.25rem;
-            background-color: var(--color-sand);
+            background-color: var(--color-white);
             padding-inline: 1rem;
         }
 
