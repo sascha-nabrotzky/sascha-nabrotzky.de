@@ -1,8 +1,7 @@
 <f:if condition="{data.media}">
     <f:asset.css identifier="lib-bg-image">
         body { background-image: url('{f:cObject(typoscriptObjectPath:
-        'lib.headerimage')}'); background-repeat: no-repeat; background-size:
-        25% auto; background-position: top right; }
+        'lib.headerimage')}');}
     </f:asset.css>
 </f:if>
 <header class="main-header">
