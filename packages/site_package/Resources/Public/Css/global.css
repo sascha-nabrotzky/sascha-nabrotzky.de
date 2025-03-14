@@ -38,6 +38,7 @@
     /* Primitives */
     --color-black: hsl(0, 0%, 20%);
     --color-black-10-transp: hsl(0, 0%, 25%, 0.1);
+    --color-black-50-transp: hsl(0, 0%, 25%, 0.5);
     --color-white: hsl(0, 0%, 95%);
     --color-sand: hsl(30, 26%, 93%);
     --color-orange: hsl(39, 100%, 50%);

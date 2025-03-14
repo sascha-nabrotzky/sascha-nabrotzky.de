@@ -18,29 +18,34 @@
         <div class="collection-item">
             <f:if condition="{collection-item.image}">
                 <f:for each="{collection-item.image}" as="image">
-                    <div class="image-wrapper">
-                        <f:image
-                            image="{image}"
-                            alt="{image.description}"
-                            cropVariant="default"
-                            maxWidth="700"
-                            loading="lazy"
-                        />
-                    </div>
                     <f:if condition="{image.link}">
-                        <f:link.typolink
-                            parameter="{image.link}"
-                            class="more-link"
-                        >
-                            <f:translate
-                                key="navlinks.more"
-                                extensionName="site_package"
-                            />
-                            <f:cObject
-                                typoscriptObjectPath="lib.inlineSvg"
-                                data="{src:'EXT:site_package/Resources/Public/Icons/arrow-right-link.svg'}"
-                            />
-                        </f:link.typolink>
+                        <f:then>
+                            <f:link.typolink
+                                parameter="{image.link}"
+                                additionalAttributes="{aria-label:'link to {collection-item.header}'}"
+                            >
+                                <div class="image-wrapper">
+                                    <f:image
+                                        image="{image}"
+                                        alt="{image.description}"
+                                        cropVariant="default"
+                                        maxWidth="700"
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </f:link.typolink>
+                        </f:then>
+                        <f:else>
+                            <div class="image-wrapper">
+                                <f:image
+                                    image="{image}"
+                                    alt="{image.description}"
+                                    cropVariant="default"
+                                    maxWidth="700"
+                                    loading="lazy"
+                                />
+                            </div>
+                        </f:else>
                     </f:if>
                 </f:for>
             </f:if>
