@@ -137,14 +137,14 @@
         display: flex;
         flex-direction: column;
         background-color: var(--color-white);
-        background-position: bottom right;
+        background-position: bottom 15% left;
         background-repeat: no-repeat;
         background-size: 15rem auto;
         min-height: 100svh;
         color: var(--color-black);
 
-        @media (width <= 390px) {
-            background-size: 5rem auto;
+        @media (width <= 640px) {
+            background-size: 7rem auto;
         }
     }
 

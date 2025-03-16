@@ -1,22 +1,29 @@
+.mobile-nav-toggle-button {
+    @media (width > 640px) {
+        display: none;
+    }
+
+    &:checked {
+        + .main-nav-wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: gray;
+        }
+    }
+}
+
 .main-header {
     padding: 2rem;
     width: 100%;
     max-width: var(--w-xl);
     margin-inline: auto;
 
-    @media (width <= 640px) {
-        padding: 1rem;
-    }
-
     & > div {
         display: flex;
         justify-content: space-between;
 
         @media (width <= 640px) {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: space-between;
-            column-gap: 1rem;
+            display: none;
         }
     }
 }

@@ -4,8 +4,16 @@
         'lib.headerimage')}');}
     </f:asset.css>
 </f:if>
+
 <header class="main-header">
-    <div>
+    <input
+        type="checkbox"
+        class="mobile-nav-toggle-button"
+        aria-label="toggle mobile navigation"
+        aria-expanded="false"
+    ></input>
+
+    <div class="main-nav-wrapper">
         <f:render partial="MainNavigation" arguments="{_all}" />
         <f:render partial="LanguageNavigation" arguments="{_all}" />
     </div>
