@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   fill="currentColor"
+   class="hamburger"
+   viewBox="0 0 80 30"
+   width="40"
+   version="1.1"
+   id="svg3"
+   height="30"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <rect
+     class="line top"
+     width="80"
+     height="12"
+     x="0"
+     y="-15"
+     id="rect1"
+      />
+  <rect
+     class="line middle"
+     width="80"
+     height="12"
+     x="0"
+     y="9.001955"
+     id="rect2"
+      />
+  <rect
+     class="line bottom"
+     width="80"
+     height="12"
+     x="0"
+     y="33.00391"
+     id="rect3"
+      />
+</svg>

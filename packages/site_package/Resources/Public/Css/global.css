@@ -137,15 +137,10 @@
         display: flex;
         flex-direction: column;
         background-color: var(--color-white);
-        background-position: bottom right;
+        background-position: top;
         background-repeat: no-repeat;
-        background-size: 15rem auto;
         min-height: 100svh;
         color: var(--color-black);
-
-        @media (width <= 390px) {
-            background-size: 5rem auto;
-        }
     }
 
     /* Typo3 spacings */
