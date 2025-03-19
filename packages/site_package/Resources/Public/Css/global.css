@@ -54,6 +54,9 @@
 
     --w-xl: 90rem;
     --w-lg: 50rem;
+
+    /*  */
+    interpolate-size: allow-keywords;
 }
 
 @layer typography {
