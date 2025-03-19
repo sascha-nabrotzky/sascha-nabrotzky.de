@@ -1,5 +1,8 @@
 .main-header {
+    max-width: var(--w-xl);
+    margin-inline: auto;
     padding: 2rem;
+    width: 100%;
 
     @media (width <= 640px) {
         padding: 1rem;
@@ -66,9 +69,6 @@
 .main-nav-wrapper {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: var(--w-xl);
-    margin-inline: auto;
 
     @media (width <= 640px) {
         flex-direction: column;
