@@ -5,34 +5,7 @@
     </f:asset.css>
 </f:if>
 
-<header class="main-header">
-    <p class="logo-name">S//N</p>
-    <div class="toggle-btn-wrapper">
-        <input
-            type="checkbox"
-            class="nav-toggle-button"
-            aria-label="toggle mobile navigation"
-        ></input>
-        <div class="menu-open-icon">
-            <f:cObject
-                typoscriptObjectPath="lib.inlineSvg"
-                data="{src:'EXT:site_package/Resources/Public/Icons/menu.svg'}"
-            />
-        </div>
-        <div class="menu-close-icon">
-            <f:cObject
-                typoscriptObjectPath="lib.inlineSvg"
-                data="{src:'EXT:site_package/Resources/Public/Icons/close.svg'}"
-            />
-        </div>
-    </div>
-
-    <div class="main-nav-wrapper">
-        <f:render partial="MainNavigation" arguments="{_all}" />
-        <f:render partial="LanguageNavigation" arguments="{_all}" />
-    </div>
-    <f:render partial="SubNavigation" arguments="{_all}" />
-</header>
+<f:render partial="Header" arguments="{_all}" />
 <f:render section="Extended" />
 <f:render section="Main" />
 <f:render section="Footer" />

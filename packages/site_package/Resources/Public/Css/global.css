@@ -261,24 +261,6 @@
 }
 
 @layer ce-elements {
-    figure {
-        margin: 1rem 0;
-
-        img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-        }
-    }
-
-    .ce-image img {
-        height: auto;
-
-        @media (width <= 800px) {
-            width: 100%;
-        }
-    }
-
     .ce-right .image {
         text-align: right;
     }
@@ -289,6 +271,28 @@
 
     .ce-headline-center {
         text-align: center;
+    }
+
+    /* Custom CE Styling */
+    .frame-shorter-width,
+    .frame-shorter-width-center {
+        figure {
+            margin: 1rem 0;
+
+            img {
+                width: 100%;
+                max-width: 800px;
+                height: auto;
+            }
+        }
+
+        .ce-image img {
+            height: auto;
+
+            @media (width <= 800px) {
+                width: 100%;
+            }
+        }
     }
 
     .frame-shorter-width {
