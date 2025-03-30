@@ -31,6 +31,9 @@
             <trans-unit id="hero-headline" xml:space="preserve">
                 <source>Hero Headline</source>
             </trans-unit>
+            <trans-unit id="foot-note" xml:space="preserve">
+                <source>Foot Note</source>
+            </trans-unit>
         </body>
    </file>
 </xliff>

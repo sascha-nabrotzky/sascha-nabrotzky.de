@@ -142,8 +142,16 @@
         background-color: var(--color-white);
         background-position: top;
         background-repeat: no-repeat;
+        background-size: 17rem;
         min-height: 100svh;
         color: var(--color-black);
+
+        @media (width >= 640px) {
+            background-size: 24rem;
+        }
+        @media (width >= 1024px) {
+            background-size: 43rem;
+        }
     }
 
     /* Typo3 spacings */
@@ -346,5 +354,12 @@
                 padding-inline-start: var(--spacing-sm);
             }
         }
+    }
+
+    .frame-foot-note {
+        margin-left: auto;
+        border-left: 1px solid var(--color-black);
+        padding: 0 0 4rem 1rem;
+        max-width: fit-content;
     }
 }

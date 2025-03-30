@@ -18,5 +18,6 @@ TCEFORM.tt_content.frame_class {
       shorter-width = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:shorter-width
       shorter-width-center = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:shorter-width-center
       hero-headline = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:hero-headline
+      foot-note = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:foot-note
    }
 }
