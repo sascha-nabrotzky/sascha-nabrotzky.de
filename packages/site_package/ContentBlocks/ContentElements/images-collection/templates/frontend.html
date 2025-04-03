@@ -7,17 +7,26 @@
     src="{cb:assetPath()}/frontend.js"
 />
 
-<div id="{data.uid}" class="images-collection">
+<div
+    id="{data.uid}"
+    class="images-collection"
+>
     <f:if condition="{data.header}">
         <header>
             <h4 class="headline">{data.header}</h4>
             <div class="line" />
         </header>
     </f:if>
-    <f:for each="{data.collection}" as="collection-item">
+    <f:for
+        each="{data.collection}"
+        as="collection-item"
+    >
         <div class="collection-item">
             <f:if condition="{collection-item.image}">
-                <f:for each="{collection-item.image}" as="image">
+                <f:for
+                    each="{collection-item.image}"
+                    as="image"
+                >
                     <f:if condition="{image.link}">
                         <f:then>
                             <f:link.typolink
@@ -27,7 +36,7 @@
                                 <div class="image-wrapper">
                                     <f:image
                                         image="{image}"
-                                        alt="{image.description}"
+                                        alt="{image.alternative}"
                                         cropVariant="default"
                                         maxWidth="700"
                                         loading="lazy"
@@ -39,7 +48,7 @@
                             <div class="image-wrapper">
                                 <f:image
                                     image="{image}"
-                                    alt="{image.description}"
+                                    alt="{image.alternative}"
                                     cropVariant="default"
                                     maxWidth="700"
                                     loading="lazy"
@@ -51,7 +60,10 @@
             </f:if>
             <f:if condition="{collection-item.header}">
                 <div class="description">
-                    <p>{collection-item.header} {collection-item.text}</p>
+                    <p>
+                        <span>{collection-item.header} </span
+                        >{collection-item.text}
+                    </p>
                 </div>
             </f:if>
         </div>
