@@ -84,9 +84,9 @@ button {
     border-style: none;
     padding: 0;
 }
-:-moz-focusring {
+/* :-moz-focusring {
     outline: 1px dotted ButtonText;
-}
+} */
 :-moz-ui-invalid {
     box-shadow: none;
 }

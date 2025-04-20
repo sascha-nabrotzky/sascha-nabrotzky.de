@@ -16,6 +16,9 @@
             <trans-unit id="navlinks.homepage" xml:space="preserve">
                 <source>Home</source>
             </trans-unit>
+            <trans-unit id="totopbutton" xml:space="preserve">
+                <source>Back to top</source>
+            </trans-unit>
             <trans-unit id="navlinks.more" xml:space="preserve">
                 <source>More Infos</source>
             </trans-unit>

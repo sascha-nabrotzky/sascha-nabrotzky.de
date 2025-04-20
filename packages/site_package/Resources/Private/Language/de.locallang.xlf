@@ -7,6 +7,10 @@
                 <source>Home</source>
                 <target>Startseite</target>
             </trans-unit>
+            <trans-unit id="totopbutton" xml:space="preserve">
+                <source>Back to top</source>
+                <target>Zurück nach oben</target>
+            </trans-unit>
             <trans-unit id="navlinks.more" xml:space="preserve">
                 <source>More Infos</source>
                 <target>Mehr Infos</target>

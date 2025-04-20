@@ -47,6 +47,7 @@
     --color-call-to-action: var(--color-orange);
     --color-secondary: var(--color-black);
     --color-shadow-default: var(--color-black-10-transp);
+    --color-focus: var(--color-orange);
 
     /* Components */
     --btn-call-to-action: var(--color-call-to-action);
@@ -152,6 +153,11 @@
         @media (width >= 1024px) {
             background-size: 43rem;
         }
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-focus);
+        outline-offset: 0.4rem;
     }
 
     /* Typo3 spacings */
