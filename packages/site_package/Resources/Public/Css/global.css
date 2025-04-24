@@ -153,6 +153,9 @@
         @media (width >= 1024px) {
             background-size: 43rem;
         }
+        @media (width >= 1440px) {
+            background-position: top right 30%;
+        }
     }
 
     :focus-visible {
