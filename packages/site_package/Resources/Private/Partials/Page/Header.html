@@ -1,7 +1,7 @@
 <a href="#main" class="skip-to-main">Skip to main content</a>
 
 <header class="main-header">
-    <div class="logo-name" aria-hidden="true">S//N</div>
+    <f:link.page pageUid="{startpage_id}" class="logo-name {f:if(condition: '{startpage_id} == {data.uid}', then: 'active')}" title="Link zur Startseite" aria-hidden="true">S//N</f:link.page>
     <div class="toggle-btn-wrapper">
         <input
             type="checkbox"
