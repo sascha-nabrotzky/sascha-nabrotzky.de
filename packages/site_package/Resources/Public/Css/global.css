@@ -197,10 +197,6 @@
     }
 
     /* Text */
-    li:not(.ce-bodytext li) {
-        list-style-type: none;
-    }
-
     .text-muted {
         opacity: 0.5;
     }

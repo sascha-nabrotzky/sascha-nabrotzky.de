@@ -3,11 +3,11 @@ languages:
   -
     title: English
     enabled: true
-    locale: en-US
+    locale: en_US.utf8
     hreflang: ''
     base: /
     websiteTitle: ''
-    navigationTitle: ''
+    navigationTitle: English
     flag: us
     languageId: 0
   -
@@ -22,5 +22,5 @@ languages:
     fallbacks: ''
     flag: de
     languageId: 1
-rootPageId: 13
+rootPageId: 7
 websiteTitle: 'Sascha Nabrotzky | UX Engineer'
