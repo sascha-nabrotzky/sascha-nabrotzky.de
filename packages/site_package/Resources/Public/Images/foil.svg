@@ -1,0 +1,17 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    id="foil"
+    viewBox="4548 517 1920 571"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    fill="none"
+    version="1.1"
+>
+    <g id="foil-group">
+        <g class="fills" id="foil-fills" >
+            <path
+                d="M5645,686L4548,686L4548,517L6468,517L6468,686L6304,686L6304,1088L5645,1088L5645,686"
+            fill="#ffd429"
+            />
+        </g>
+    </g>
+</svg>

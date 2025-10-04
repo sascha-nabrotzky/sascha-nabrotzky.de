@@ -44,7 +44,7 @@
     --color-white: hsl(0, 0%, 95%);
     --color-sand: hsl(30, 26%, 93%);
     --color-orange: hsl(39, 100%, 50%);
-    --color-yellow: hsl(48, 100%, 58%);
+    --color-yellow: #ffd429;
 
     /* Semantic */
     --color-call-to-action: var(--color-orange);
@@ -327,6 +327,23 @@
     }
 
     .frame-hero-headline {
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            mix-blend-mode: darken;
+            content: url('data:image/svg+xml;base64,PHN2ZwogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICAgaWQ9ImZvaWwiCiAgICB2aWV3Qm94PSI0NTQ4IDUxNyAxOTIwIDU3MSIKICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgZmlsbD0ibm9uZSIKICAgIHZlcnNpb249IjEuMSIKPgogICAgPGcgaWQ9ImZvaWwtZ3JvdXAiPgogICAgICAgIDxnIGNsYXNzPSJmaWxscyIgaWQ9ImZvaWwtZmlsbHMiID4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgIGQ9Ik01NjQ1LDY4Nkw0NTQ4LDY4Nkw0NTQ4LDUxN0w2NDY4LDUxN0w2NDY4LDY4Nkw2MzA0LDY4Nkw2MzA0LDEwODhMNTY0NSwxMDg4TDU2NDUsNjg2IgogICAgICAgICAgICBmaWxsPSIjZmZkNDI5IgogICAgICAgICAgICAvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+');
+
+            @media (width >= 640px) {
+                top: 5rem;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
         > header {
             h1,
             h2 {
