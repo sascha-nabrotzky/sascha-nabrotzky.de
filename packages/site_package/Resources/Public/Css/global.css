@@ -11,6 +11,8 @@
 *  ******************* */
 
 :root {
+    color-scheme: light dark;
+
     --ff-sans: 'InterVariable', 'Inter', 'Roboto', 'Helvetica Neue',
         'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 
@@ -36,12 +38,13 @@
     --spacing-xl: 5rem;
 
     /* Primitives */
-    --color-black: hsl(0, 0%, 20%);
+    --color-black: hsl(0, 0%, 16%);
     --color-black-10-transp: hsl(0, 0%, 25%, 0.1);
     --color-black-50-transp: hsl(0, 0%, 25%, 0.5);
     --color-white: hsl(0, 0%, 95%);
     --color-sand: hsl(30, 26%, 93%);
     --color-orange: hsl(39, 100%, 50%);
+    --color-yellow: hsl(48, 100%, 58%);
 
     /* Semantic */
     --color-call-to-action: var(--color-orange);
@@ -53,14 +56,16 @@
     --btn-call-to-action: var(--color-call-to-action);
     --btn-cancel: var(--color-secondary);
 
+    /* Dimensions */
     --w-xl: 90rem;
     --w-lg: 50rem;
 
-    /*  */
+    /* Special */
     interpolate-size: allow-keywords;
 }
 
 @layer typography {
+    /* Font features */
     body {
         font-family: var(--ff-sans);
         font-feature-settings: 'liga' 1, 'calt' 1, 'ss02' 1, 'zero' 1; /* fix for Chrome */
@@ -154,7 +159,11 @@
             background-size: 43rem;
         }
         @media (width >= 1440px) {
-            background-position: top right 30%;
+            background-position: top right;
+        }
+        @media (prefers-color-scheme: dark) {
+            background-color: var(--color-black);
+            color: var(--color-white);
         }
     }
 
@@ -366,5 +375,9 @@
         border-left: 1px solid var(--color-black);
         padding: 0 0 4rem 1rem;
         max-width: fit-content;
+
+        @media (prefers-color-scheme: dark) {
+            border-color: var(--color-white);
+        }
     }
 }
