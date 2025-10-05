@@ -22,5 +22,11 @@
 
     fieldset {
         background-color: var(--color-white);
+
+        @media (prefers-color-scheme: dark) {
+            background-color: var(--color-black);
+            border-color: var(--color-white-50-transp);
+            color: var(--color-white);
+        }
     }
 }

@@ -42,9 +42,10 @@
     --color-black-10-transp: hsl(0, 0%, 25%, 0.1);
     --color-black-50-transp: hsl(0, 0%, 25%, 0.5);
     --color-white: hsl(0, 0%, 95%);
+    --color-white-50-transp: hsla(0, 0%, 95%, 0.5);
     --color-sand: hsl(30, 26%, 93%);
     --color-orange: hsl(39, 100%, 50%);
-    --color-yellow: #ffd429;
+    --color-yellow: hsl(48, 100%, 58%);
 
     /* Semantic */
     --color-call-to-action: var(--color-orange);
@@ -97,35 +98,57 @@
         line-height: 1;
         letter-spacing: -0.07rem;
 
+        @media (width <= 640px) {
+            font-size: var(--fs-4xl);
+        }
+
         + h2 {
             margin-bottom: 1rem;
         }
     }
     h2 {
-        margin: 0 0 1rem 0;
+        margin: 0 0 2rem 0;
+        line-height: 1.1;
         font-size: var(--fs-4xl);
 
         @media (width <= 640px) {
-            font-size: 15vw;
+            font-size: var(--fs-3xl);
             margin-bottom: 1rem;
         }
     }
     h3 {
-        margin: 0 0 1rem 0;
+        margin: 3rem 0 2rem 0;
+        line-height: 1.2;
         font-size: var(--fs-3xl);
-        margin-bottom: 0.5rem;
+
+        @media (width <= 640px) {
+            font-size: var(--fs-2xl);
+            margin: 2rem 0 0.5rem 0;
+        }
     }
     h4 {
         margin: 0 0 1rem 0;
         font-size: var(--fs-2xl);
+
+        @media (width <= 640px) {
+            font-size: var(--fs-xl);
+        }
     }
     h5 {
         margin: 0 0 1rem 0;
         font-size: var(--fs-xl);
+
+        @media (width <= 640px) {
+            font-size: var(--fs-lg);
+        }
     }
     h6 {
         margin: 0 0 1rem 0;
         font-size: var(--fs-lg);
+
+        @media (width <= 640px) {
+            font-size: var(--fs-md);
+        }
     }
 
     /* Bodytext */
