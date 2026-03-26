@@ -47,11 +47,11 @@ page {
   }
 
   shortcutIcon = EXT:site_package/Resources/Public/Icons/favicon.svg
-
-  [page["pid"] == {$site_package.configuration.folder.privacy}]
-    page.bodyTagAdd = data-page='legal'
-  [end]
 }
+
+[page["pid"] == {$site_package.configuration.folder.privacy}]
+    page.bodyTagAdd = data-page='legal'
+[end]
 
 page.10 = FLUIDTEMPLATE
 page.10 {
