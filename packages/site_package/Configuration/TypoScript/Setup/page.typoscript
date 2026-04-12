@@ -31,6 +31,7 @@ page {
   }
 
   includeJSFooter {
+    alpinejs = EXT:site_package/Resources/Public/JavaScript/alpine_5.15.11.min.js
     slide-in-right = EXT:site_package/Resources/Public/JavaScript/slide-in-right.js
     to-top-button = EXT:site_package/Resources/Public/JavaScript/to-top-button.js
   }
