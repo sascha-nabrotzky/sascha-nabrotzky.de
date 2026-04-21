@@ -1,0 +1,20 @@
+:root {
+    color-scheme: light dark;
+
+    --color-black: hsl(0, 0%, 16%);
+    --color-black-10-transp: hsl(0, 0%, 25%, 0.1);
+    --color-black-50-transp: hsl(0, 0%, 25%, 0.5);
+    --color-white: hsl(0, 0%, 95%);
+    --color-white-50-transp: hsla(0, 0%, 95%, 0.5);
+    --color-sand: hsl(30, 26%, 93%);
+    --color-orange: hsl(39, 100%, 50%);
+    --color-yellow: hsl(48, 100%, 58%);
+
+    --color-call-to-action: var(--color-orange);
+    --color-secondary: var(--color-black);
+    --color-focus: var(--color-orange);
+
+    --color-shadow-default: var(--color-black-10-transp);
+    --btn-call-to-action: var(--color-call-to-action);
+    --btn-cancel: var(--color-secondary);
+}

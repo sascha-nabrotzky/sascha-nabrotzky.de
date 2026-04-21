@@ -1,0 +1,26 @@
+a {
+    color: inherit;
+    text-underline-offset: 0.3rem;
+    text-decoration-thickness: 1px;
+}
+
+nav {
+    a {
+        text-decoration: none;
+
+        &:vistited {
+            color: inherit;
+        }
+    }
+
+    .active {
+        text-decoration: underline 2px var(--color-orange);
+    }
+}
+
+.more-link-btn {
+    border-radius: 3rem;
+    background-color: var(--color-orange);
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+}

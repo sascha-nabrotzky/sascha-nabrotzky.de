@@ -1,8 +1,19 @@
-@import url('normalize.css');
-@import url('global.css');
-@import url('main.css');
-@import url('header.css');
-@import url('footer.css');
-@import url('to-top-button.css');
-@import url('contact-form.css');
-@import url('legal.css');
+@layer theme, base, layout, components;
+
+@import url('colors.css') layer(theme);
+@import url('typography.css') layer(theme);
+@import url('spacing.css') layer(theme);
+
+@import url('normalize.css') layer(base);
+@import url('global.css') layer(base);
+
+@import url('footer.css') layer(layout);
+@import url('main.css') layer(layout);
+@import url('header.css') layer(layout);
+@import url('legal.css') layer(layout);
+@import url('links.css') layer(layout);
+
+@import url('buttons.css') layer(components);
+@import url('to-top-button.css') layer(components);
+@import url('contact-form.css') layer(components);
+@import url('typo3-content-elements.css') layer(components);

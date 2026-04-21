@@ -1,0 +1,17 @@
+button {
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+}
+
+.btn-primary {
+    background-color: var(--btn-call-to-action);
+}
+
+.btn-cancel {
+    border: 1px solid var(--btn-cancel);
+}

@@ -1,0 +1,112 @@
+.ce-right .image {
+    text-align: right;
+}
+
+.ce-center .image {
+    text-align: center;
+}
+
+.ce-headline-center {
+    text-align: center;
+}
+
+/* Custom CE Styling */
+.frame-shorter-width,
+.frame-shorter-width-center {
+    figure {
+        margin: 1rem 0;
+
+        img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+        }
+    }
+
+    .ce-image img {
+        height: auto;
+
+        @media (width <= 800px) {
+            width: 100%;
+        }
+    }
+}
+
+.frame-shorter-width {
+    max-width: var(--w-lg);
+}
+
+.frame-shorter-width-center {
+    max-width: var(--w-lg);
+    margin-inline: auto;
+}
+
+.frame-hero-headline {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        mix-blend-mode: darken;
+        content: url('data:image/svg+xml;base64,PHN2ZwogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICAgaWQ9ImZvaWwiCiAgICB2aWV3Qm94PSI0NTQ4IDUxNyAxOTIwIDU3MSIKICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgZmlsbD0ibm9uZSIKICAgIHZlcnNpb249IjEuMSIKPgogICAgPGcgaWQ9ImZvaWwtZ3JvdXAiPgogICAgICAgIDxnIGNsYXNzPSJmaWxscyIgaWQ9ImZvaWwtZmlsbHMiID4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgIGQ9Ik01NjQ1LDY4Nkw0NTQ4LDY4Nkw0NTQ4LDUxN0w2NDY4LDUxN0w2NDY4LDY4Nkw2MzA0LDY4Nkw2MzA0LDEwODhMNTY0NSwxMDg4TDU2NDUsNjg2IgogICAgICAgICAgICBmaWxsPSIjMjhmZjkzIgogICAgICAgICAgICAvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+');
+
+        @media (width >= 640px) {
+            inset: 6rem 0 0 0;
+        }
+    }
+
+    > header {
+        h1,
+        h2 {
+            font-size: clamp(5rem, 12vw, 10.875rem);
+            line-height: 1;
+            letter-spacing: -0.3rem;
+
+            @media (width < 1024px) {
+                font-size: 11.5vw;
+                letter-spacing: -0.2rem;
+            }
+            @media (width <= 640px) {
+                letter-spacing: -0.1rem;
+            }
+        }
+
+        h1 {
+            margin-bottom: 0;
+
+            &:not(:has(~ h2)) {
+                margin-bottom: var(--spacing-sm);
+            }
+        }
+
+        h2 {
+            margin-bottom: var(--spacing-sm);
+
+            @media (width <= 640px) {
+                letter-spacing: unset;
+            }
+        }
+    }
+
+    p {
+        font-size: var(--fs-lg);
+        max-width: var(--w-lg);
+        margin-inline: auto;
+
+        @media (width <= 800px) {
+            padding-inline-start: var(--spacing-sm);
+        }
+    }
+}
+
+.frame-foot-note {
+    margin-left: auto;
+    border-left: 1px solid var(--color-black);
+    padding: 0 0 4rem 1rem;
+    max-width: fit-content;
+
+    @media (prefers-color-scheme: dark) {
+        border-color: var(--color-white);
+    }
+}

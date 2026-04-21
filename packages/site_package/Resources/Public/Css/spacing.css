@@ -1,0 +1,40 @@
+:root {
+    --spacing-xs: 1rem;
+    --spacing-sm: 2rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 5rem;
+}
+
+/* Typo3 spacings */
+.frame-space-before-extra-small {
+    margin-top: var(--spacing-xs);
+}
+.frame-space-before-small {
+    margin-top: var(--spacing-sm);
+}
+.frame-space-before-medium {
+    margin-top: var(--spacing-md);
+}
+.frame-space-before-large {
+    margin-top: var(--spacing-lg);
+}
+.frame-space-before-extra-large {
+    margin-top: var(--spacing-xl);
+}
+
+.frame-space-after-extra-small {
+    margin-bottom: var(--spacing-xs);
+}
+.frame-space-after-small {
+    margin-bottom: var(--spacing-sm);
+}
+.frame-space-after-medium {
+    margin-bottom: var(--spacing-md);
+}
+.frame-space-after-large {
+    margin-bottom: var(--spacing-lg);
+}
+.frame-space-after-extra-large {
+    margin-bottom: var(--spacing-xl);
+}
