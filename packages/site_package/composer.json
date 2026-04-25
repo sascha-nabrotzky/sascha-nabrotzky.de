@@ -10,12 +10,12 @@
         }
     ],
     "require": {
-        "typo3/cms-core": "^13.2.0|dev-main",
-        "typo3/cms-fluid-styled-content": "^13.2.0|dev-main"
+        "typo3/cms-core": "^14.3.0|dev-main",
+        "typo3/cms-fluid-styled-content": "^14.3.0|dev-main"
     },
     "homepage": "https://github.com/sascha-nabrotzky/sascha-nabrotzky.de",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "14.3.0",
     "keywords": [
         "typo3",
         "site package",
@@ -34,7 +34,7 @@
             "extension-key": "site_package"
         },
         "branch-alias": {
-            "dev-master": "13.2.x-dev"
+            "dev-master": "14.3.x-dev"
         }
     }
 }
