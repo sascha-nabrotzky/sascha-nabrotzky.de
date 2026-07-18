@@ -6,10 +6,19 @@
     src: url('../fonts/InterVariable.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: TeenRay;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/TeenRay.woff2') format('woff2');
+}
+
 :root {
     --ff-sans:
         'InterVariable', 'Inter', 'Roboto', 'Helvetica Neue', 'Arial Nova',
         'Nimbus Sans', Arial, sans-serif;
+    --ff-italic: 'TeenRay', italic;
 
     /* Major Third */
     --fs-xs: 0.64rem; /* extra-small */
@@ -25,6 +34,9 @@
     --lh-xs: 0.9;
     --lh-sm: 1.1;
     --lh-base: 1.5; /* p */
+
+    --ltrsp-lg: 0.012rem;
+    --wrdsp-lg: 0.1rem;
 }
 
 body {
@@ -36,6 +48,7 @@ body {
         'zero' 1; /* fix for Chrome */
     font-size: var(--fs-base);
     line-height: var(--lh-base);
+    font-optical-sizing: auto;
 }
 
 @supports (font-variation-settings: normal) {
@@ -124,6 +137,8 @@ h6 {
 /* Bodytext */
 p {
     margin-block: 0 0.5rem;
+    letter-spacing: var(--ltrsp-lg);
+    word-spacing: var(--wrdsp-lg);
 }
 
 small {

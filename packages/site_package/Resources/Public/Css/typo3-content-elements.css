@@ -50,6 +50,7 @@
         inset: 0;
         mix-blend-mode: darken;
         content: url('data:image/svg+xml;base64,PHN2ZwogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICAgaWQ9ImZvaWwiCiAgICB2aWV3Qm94PSI0NTQ4IDUxNyAxOTIwIDU3MSIKICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgZmlsbD0ibm9uZSIKICAgIHZlcnNpb249IjEuMSIKPgogICAgPGcgaWQ9ImZvaWwtZ3JvdXAiPgogICAgICAgIDxnIGNsYXNzPSJmaWxscyIgaWQ9ImZvaWwtZmlsbHMiID4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgIGQ9Ik01NjQ1LDY4Nkw0NTQ4LDY4Nkw0NTQ4LDUxN0w2NDY4LDUxN0w2NDY4LDY4Nkw2MzA0LDY4Nkw2MzA0LDEwODhMNTY0NSwxMDg4TDU2NDUsNjg2IgogICAgICAgICAgICBmaWxsPSIjMjhmZjkzIgogICAgICAgICAgICAvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+');
+        pointer-events: none;
 
         @media (width >= 640px) {
             inset: 6rem 0 0 0;
@@ -59,16 +60,13 @@
     > header {
         h1,
         h2 {
-            font-size: clamp(5rem, 12vw, 10.875rem);
-            line-height: 1;
-            letter-spacing: -0.3rem;
+            line-height: 0.8;
+            font-family: var(--ff-italic);
+            font-size: clamp(2rem, 13.3vw, 12rem);
+            font-weight: 400;
 
-            @media (width < 1024px) {
-                font-size: 11.5vw;
-                letter-spacing: -0.2rem;
-            }
             @media (width <= 640px) {
-                letter-spacing: -0.1rem;
+                line-height: 1;
             }
         }
 
