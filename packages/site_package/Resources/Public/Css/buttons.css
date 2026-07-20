@@ -10,6 +10,8 @@ button {
 
 .btn-primary {
     background-color: var(--btn-call-to-action);
+    color: var(--btn-call-to-action-text);
+    font-weight: 600;
 }
 
 .btn-cancel {

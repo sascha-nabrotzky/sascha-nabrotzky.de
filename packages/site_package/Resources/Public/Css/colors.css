@@ -16,5 +16,6 @@
 
     --color-shadow-default: var(--color-black-10-transp);
     --btn-call-to-action: var(--color-call-to-action);
+    --btn-call-to-action-text: var(--color-black);
     --btn-cancel: var(--color-secondary);
 }
