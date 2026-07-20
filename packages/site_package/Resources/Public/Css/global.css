@@ -26,7 +26,6 @@ body {
     background-size: 17rem;
     min-height: 100svh;
     color: var(--color-black);
-    row-gap: 2rem;
 
     > * {
         grid-column: 2 / -2;
