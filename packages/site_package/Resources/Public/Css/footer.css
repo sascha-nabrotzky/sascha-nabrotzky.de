@@ -1,13 +1,14 @@
 footer {
+    display: flex;
+    flex-direction: column;
     margin-top: auto;
-    padding: 2rem;
+    padding-bottom: 2rem;
     width: 100%;
-    max-width: var(--w-xl);
     font-size: var(--fs-sm);
     margin-inline: auto;
 
     @media (width <= 640px) {
-        padding: 1rem;
+        padding-bottom: 1rem;
     }
 
     nav {
@@ -17,6 +18,10 @@ footer {
         @media (width <= 640px) {
             justify-content: center;
         }
+    }
+
+    > * {
+        grid-column: 1 / -1;
     }
 }
 

@@ -9,13 +9,14 @@
 }
 
 .main-header {
-    max-width: var(--w-xl);
-    margin-inline: auto;
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
     width: 100%;
+    row-gap: 1rem;
 
     @media (width <= 640px) {
-        padding: 1rem;
+        padding-top: 1rem;
     }
 
     .logo-name {
@@ -83,7 +84,6 @@
 .main-nav-wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
 
     @media (width <= 640px) {
         flex-direction: column;
