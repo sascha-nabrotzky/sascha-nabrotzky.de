@@ -63,7 +63,7 @@
         h2 {
             line-height: 0.8;
             font-family: var(--ff-italic);
-            font-size: clamp(2rem, 13.3vw, 11.5rem);
+            font-size: clamp(2rem, 13vw, 16rem);
             font-weight: 400;
 
             @media (width <= 640px) {
