@@ -73,7 +73,7 @@ h6 {
 h1 {
     margin: 0 0 3rem 0;
     font-size: var(--fs-5xl);
-    line-height: 1;
+    line-height: 1.05;
     letter-spacing: -0.07rem;
 
     @media (width <= 640px) {

@@ -10,37 +10,6 @@
     text-align: center;
 }
 
-/* Custom CE Styling */
-.frame-shorter-width,
-.frame-shorter-width-center {
-    figure {
-        margin: 1rem 0;
-
-        img {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-        }
-    }
-
-    .ce-image img {
-        height: auto;
-
-        @media (width <= 800px) {
-            width: 100%;
-        }
-    }
-}
-
-.frame-shorter-width {
-    max-width: var(--w-lg);
-}
-
-.frame-shorter-width-center {
-    max-width: var(--w-lg);
-    margin-inline: auto;
-}
-
 .frame-hero-headline {
     position: relative;
     grid-column: 1 / -1;

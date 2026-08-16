@@ -66,17 +66,16 @@ main {
     bottom: 0;
 }
 
-@layer animations {
-    .frame-slide-in-right {
-        transform: translateX(3rem);
-        opacity: 0;
-        transition:
-            transform 600ms,
-            opacity 600ms;
-    }
+figure {
+    margin: 1rem 0;
 
-    .appear {
-        transform: translateX(0rem);
-        opacity: 1;
+    img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+
+        @media (width <= 800px) {
+            width: 100%;
+        }
     }
 }

@@ -1,7 +1,7 @@
 .skip-to-main {
     position: absolute;
-    opacity: 0;
     transition: opacity 300ms ease-in;
+    opacity: 0;
 
     &:focus-visible {
         opacity: 1;
@@ -20,9 +20,9 @@
     }
 
     .logo-name {
-        font-weight: bolder;
-        font-size: var(--fs-lg);
         text-decoration: none;
+        font-size: var(--fs-lg);
+        font-weight: bolder;
 
         @media (width <= 640px) {
             margin-bottom: 0;
@@ -87,9 +87,9 @@
 
     @media (width <= 640px) {
         flex-direction: column;
+        transition: 300ms ease-out;
         height: 0;
         overflow: hidden;
-        transition: 300ms ease-out;
     }
 }
 
@@ -107,8 +107,8 @@
     .nav-item {
         @media (width <= 640px) {
             background-color: white;
-            color: var(--color-black);
             padding: 0.5rem 1rem;
+            color: var(--color-black);
         }
     }
 }
@@ -119,10 +119,9 @@
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 1.5rem;
-    width: 100%;
-    max-width: var(--w-xl);
-    border-block: 1px solid var(--color-black);
     margin: 1rem auto;
+    width: 100%;
+    border-block: 1px solid var(--color-black);
     padding-block: 1rem 1.3rem;
 
     @media (width <= 640px) {
@@ -137,9 +136,9 @@
 .lang-nav {
     display: flex;
     align-items: flex-end;
+    text-transform: uppercase;
     font-size: var(--fs-sm);
     gap: 1rem;
-    text-transform: uppercase;
 
     @media (width <= 640px) {
         margin-left: auto;

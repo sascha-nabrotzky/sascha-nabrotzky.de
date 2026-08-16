@@ -12,7 +12,6 @@
             <trans-unit id="folder" xml:space="preserve">
                 <source>Folder</source>
             </trans-unit>
-
             <trans-unit id="navlinks.homepage" xml:space="preserve">
                 <source>Home</source>
             </trans-unit>
@@ -21,15 +20,6 @@
             </trans-unit>
             <trans-unit id="navlinks.more" xml:space="preserve">
                 <source>More Infos</source>
-            </trans-unit>
-           <trans-unit id="slide-in-right" xml:space="preserve">
-                <source>Slide in from right</source>
-            </trans-unit>
-            <trans-unit id="shorter-width" xml:space="preserve">
-                <source>Shorter Width</source>
-            </trans-unit>
-            <trans-unit id="shorter-width-center" xml:space="preserve">
-                <source>Shorter Width Center</source>
             </trans-unit>
             <trans-unit id="hero-headline" xml:space="preserve">
                 <source>Hero Headline</source>
