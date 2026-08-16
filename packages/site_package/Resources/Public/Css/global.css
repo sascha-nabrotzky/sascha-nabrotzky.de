@@ -1,12 +1,8 @@
 :root {
     /* Grids */
-    --grid-cols-lg: minmax(2rem, 1fr) repeat(4, minmax(0, 40rem))
+    --grid-cols-lg: minmax(2rem, 1fr) repeat(4, minmax(0, 16rem))
         minmax(2rem, 1fr);
     --grid-cols-sm: minmax(1rem, 1fr) minmax(0, 40rem) minmax(1rem, 1fr);
-
-    /* Dimensions */
-    --w-xl: 90rem;
-    --w-lg: 50rem;
 
     /* Special */
     interpolate-size: allow-keywords;
@@ -47,12 +43,6 @@ body {
         background-color: var(--color-black);
         color: var(--color-white);
     }
-}
-
-main {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: subgrid;
 }
 
 :focus-visible {

@@ -27,6 +27,18 @@
             <trans-unit id="foot-note" xml:space="preserve">
                 <source>Foot Note</source>
             </trans-unit>
+            <trans-unit id="start-at-col-one" xml:space="preserve">
+                <source>Start at column 1</source>
+            </trans-unit>
+            <trans-unit id="start-at-col-two" xml:space="preserve">
+                <source>Start at column 2</source>
+            </trans-unit>
+            <trans-unit id="start-at-col-three" xml:space="preserve">
+                <source>Start at column 3</source>
+            </trans-unit>
+            <trans-unit id="start-at-col-four" xml:space="preserve">
+                <source>Start at column 4</source>
+            </trans-unit>
         </body>
    </file>
 </xliff>

@@ -16,5 +16,9 @@ TCEFORM.tt_content.frame_class {
    addItems {
       hero-headline = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:hero-headline
       foot-note = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:foot-note
+      start-at-col-one = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:start-at-col-one
+      start-at-col-two = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:start-at-col-two
+      start-at-col-three = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:start-at-col-three
+      start-at-col-four = LLL:EXT:site_package/Resources/Private/Language/locallang.xlf:start-at-col-four 
    }
 }

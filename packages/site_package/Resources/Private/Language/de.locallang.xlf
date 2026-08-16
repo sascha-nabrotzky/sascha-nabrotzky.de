@@ -23,6 +23,22 @@
                 <source>Foot Note</source>
                 <target>Fußnote</target>
             </trans-unit>
+            <trans-unit id="start-at-col-one" xml:space="preserve">
+                <source>Start at column 1</source>
+                <target>Beginne bei Spalte 1</target>
+            </trans-unit>
+            <trans-unit id="start-at-col-two" xml:space="preserve">
+                <source>Start at column 2</source>
+                <target>Beginne bei Spalte 2</target>   
+            </trans-unit>
+            <trans-unit id="start-at-col-three" xml:space="preserve">
+                <source>Start at column 3</source>
+                <target>Beginne bei Spalte 3</target>
+            </trans-unit>
+            <trans-unit id="start-at-col-four" xml:space="preserve">
+                <source>Start at column 4</source>
+                <target>Beginne bei Spalte 4</target>
+            </trans-unit>
         </body>
    </file>
 </xliff>

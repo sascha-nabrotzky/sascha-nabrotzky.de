@@ -59,7 +59,6 @@
 
     p {
         font-size: var(--fs-lg);
-        max-width: var(--w-lg);
         margin-inline: auto;
 
         @media (width <= 800px) {
@@ -69,12 +68,29 @@
 }
 
 .frame-foot-note {
-    margin-left: auto;
     border-left: 1px solid var(--color-black);
-    padding: 0 0 4rem 1rem;
+    padding: 0 0 0 1rem;
     max-width: fit-content;
+    margin-left: auto;
+
+    @media (width >= 1024px) {
+        margin-left: unset;
+    }
 
     @media (prefers-color-scheme: dark) {
         border-color: var(--color-white);
     }
+}
+
+.frame-start-at-col-one {
+    grid-column: 1 / -1;
+}
+.frame-start-at-col-two {
+    grid-column: 2 / -1;
+}
+.frame-start-at-col-three {
+    grid-column: 3 / -1;
+}
+.frame-start-at-col-four {
+    grid-column: 4 / -1;
 }
