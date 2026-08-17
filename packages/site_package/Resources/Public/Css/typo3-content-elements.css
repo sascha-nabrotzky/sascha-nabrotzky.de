@@ -11,16 +11,18 @@
 }
 
 .frame-hero-headline {
+    display: grid;
     position: relative;
-    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    grid-column-start: 1;
     overflow: hidden;
 
     &::after {
         position: absolute;
-        inset: 0;
         mix-blend-mode: darken;
         content: url('data:image/svg+xml;base64,PHN2ZwogICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICAgaWQ9ImZvaWwiCiAgICB2aWV3Qm94PSI0NTQ4IDUxNyAxOTIwIDU3MSIKICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIgogICAgZmlsbD0ibm9uZSIKICAgIHZlcnNpb249IjEuMSIKPgogICAgPGcgaWQ9ImZvaWwtZ3JvdXAiPgogICAgICAgIDxnIGNsYXNzPSJmaWxscyIgaWQ9ImZvaWwtZmlsbHMiID4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgIGQ9Ik01NjQ1LDY4Nkw0NTQ4LDY4Nkw0NTQ4LDUxN0w2NDY4LDUxN0w2NDY4LDY4Nkw2MzA0LDY4Nkw2MzA0LDEwODhMNTY0NSwxMDg4TDU2NDUsNjg2IgogICAgICAgICAgICBmaWxsPSIjMjhmZjkzIgogICAgICAgICAgICAvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+');
         pointer-events: none;
+        inset: 0;
 
         @media (width >= 640px) {
             inset: 6rem 0 0 0;
@@ -28,11 +30,13 @@
     }
 
     > header {
+        grid-column: 1 / -1;
+
         h1,
         h2 {
             line-height: 0.8;
             font-family: var(--ff-italic);
-            font-size: clamp(2rem, 13vw, 16rem);
+            font-size: clamp(2rem, 12vw, 12rem);
             font-weight: 400;
 
             @media (width <= 640px) {
@@ -58,6 +62,7 @@
     }
 
     p {
+        grid-column: 2 / -1;
         font-size: var(--fs-lg);
         margin-inline: auto;
 
@@ -83,14 +88,33 @@
 }
 
 .frame-start-at-col-one {
-    grid-column: 1 / -1;
+    grid-column-start: 1;
 }
 .frame-start-at-col-two {
-    grid-column: 2 / -1;
+    grid-column-start: 2;
 }
 .frame-start-at-col-three {
-    grid-column: 3 / -1;
+    grid-column-start: 3;
 }
 .frame-start-at-col-four {
-    grid-column: 4 / -1;
+    grid-column-start: 4;
+}
+
+.frame-layout-6 {
+    grid-column-end: span 1;
+}
+.frame-layout-7 {
+    grid-column-end: span 2;
+}
+.frame-layout-8 {
+    grid-column-end: span 3;
+}
+.frame-layout-9 {
+    grid-column-end: span 4;
+}
+.frame-layout-10 {
+    grid-column-end: -1;
+}
+.frame-layout-11 {
+    grid-column-end: -1;
 }

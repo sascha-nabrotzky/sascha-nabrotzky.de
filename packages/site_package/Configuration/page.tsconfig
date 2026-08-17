@@ -8,7 +8,16 @@ TCAdefaults.tt_content.space_after_class= small
 
 # Add new header layout
 TCEFORM.tt_content.header_layout {
-    addItems.6 = Layout 6
+    addItems.6 = layout 6
+}
+
+TCEFORM.tt_content.layout {
+    addItems.6 = one-column
+    addItems.7 = two-columns
+    addItems.8 = three-columns
+    addItems.9 = four-columns
+    addItems.10 = full-width
+    addItems.11 = extend-right
 }
 
 TCEFORM.tt_content.frame_class {
