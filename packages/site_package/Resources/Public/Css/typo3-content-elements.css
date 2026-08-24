@@ -16,6 +16,7 @@
     grid-template-columns: subgrid;
     grid-column-start: 1;
     overflow: hidden;
+    height: min-content;
 
     &::after {
         position: absolute;
