@@ -4,6 +4,8 @@
     --color-black: hsl(0, 0%, 16%);
     --color-black-10-transp: hsl(0, 0%, 25%, 0.1);
     --color-black-50-transp: hsl(0, 0%, 25%, 0.5);
+    --color-black-75-transp: hsl(0, 0%, 25%, 0.75);
+    --color-black-97-transp: hsl(0, 0%, 25%, 0.97);
     --color-white: hsl(0, 0%, 95%);
     --color-white-50-transp: hsla(0, 0%, 95%, 0.5);
     --color-sand: hsl(30, 26%, 93%);
