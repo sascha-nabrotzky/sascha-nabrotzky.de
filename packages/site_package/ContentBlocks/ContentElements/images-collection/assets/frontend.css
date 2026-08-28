@@ -59,6 +59,7 @@
 
         &:hover .description {
             background-color: var(--color-black);
+            transform: translateX(-1rem);
         }
 
         > a {
