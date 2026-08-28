@@ -49,6 +49,7 @@
     }
 
     .collection-item {
+        container-type: inline-size;
         display: flex;
         position: relative;
         flex-direction: column;
@@ -94,10 +95,14 @@
 
             header {
                 font-weight: bold;
-                font-size: var(--fs-3xl);
+                font-size: var(--fs-2xl);
                 line-height: var(--lh-md);
                 margin-bottom: 0.7rem;
                 text-wrap: balance;
+
+                @container (width >= 440px) {
+                    font-size: var(--fs-3xl);
+                }
             }
 
             p {
