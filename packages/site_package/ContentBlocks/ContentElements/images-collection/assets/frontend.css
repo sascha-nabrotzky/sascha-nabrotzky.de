@@ -89,13 +89,15 @@
             pointer-events: none;
             margin: 0;
             color: var(--color-white);
-            text-align: center;
             box-shadow: 0px 10px 15px var(--color-black-50-transp);
-            width: 100%;
+            width: 90%;
 
             header {
                 font-weight: bold;
-                font-size: var(--fs-lg);
+                font-size: var(--fs-3xl);
+                line-height: var(--lh-md);
+                margin-bottom: 0.7rem;
+                text-wrap: balance;
             }
 
             p {
