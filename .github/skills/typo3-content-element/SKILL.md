@@ -5,22 +5,23 @@ description: Erstellt strukturierte Inhaltselemente auf Basis der modernen Conte
 
 # TYPO3 v14 Content Blocks Generator
 
-Nutze diesen Skill, wenn der User ein neues Inhaltselement oder ein neues Feld anlegen möchte. Wir nutzen ausnahmslos den deklarativen YAML-Ansatz.
+Nutze diesen Skill, wenn ein neues Inhaltselement oder ein neues Feld angelegt werden soll. Arbeite dabei ausnahmslos mit dem deklarativen YAML-Ansatz.
 
 ## Verzeichnisstruktur eines Elements
 Jedes Element liegt unter `Build/Extensions/sitepackage/ContentBlocks/ContentElements/[element-name]/` und benötigt:
-1. `config.yaml` (Zentrale Konfiguration)
-2. `Source/Private/Templates/Frontend.html` (Fluid-Template)
-3. `Source/Private/Language/Labels.xlf` (Übersetzungen)
+1. `config.yaml` als zentrale Konfiguration
+2. `Source/Private/Templates/Frontend.html` als Fluid-Template
+3. `Source/Private/Language/Labels.xlf` für Übersetzungen
 
 ## YAML-Konventionsregeln (`config.yaml`)
-- **Name:** Immer im Format `vendor/element-name`
-- **Standard-Felder wiederverwenden:** Nutze standardmäßig `useExistingField: true` für `header`.
-- **Feld-Mapping:** Identifier in Snake-Case (`teaser_image`) werden im Fluid-Template automatisch zu Camel-Case (`teaserImage`).
+- **Name:** immer im Format `vendor/element-name`
+- **Standard-Felder wiederverwenden:** `header` standardmäßig mit `useExistingField: true`
+- **Feld-Mapping:** Snake-Case-Identifiers wie `teaser_image` werden im Fluid-Template zu Camel-Case wie `teaserImage`
+- **Struktur:** Felder klar gruppieren und nur die Optionen setzen, die das Element wirklich braucht
 
 ## Code-Schablonen (Boilerplates)
 
-### 1. Erweiterte `config.yaml` (mit Asset und Collection)
+### 1. Erweiterte `config.yaml` mit Asset und Collection
 ```yaml
 name: saschanabrotzky/feature-list
 title: 'Feature Liste'
@@ -32,14 +33,12 @@ fields:
   - identifier: header
     useExistingField: true
 
-  # BILD-KONFIGURATION (Asset)
   - identifier: main_image
     type: Asset
     label: 'Hauptbild'
     maxitems: 1
     allowedFileExtensions: 'jpg,jpeg,png,svg,webp'
 
-  # VERSCHACHTELUNG (Collection / Inline-Element)
   - identifier: features
     type: Collection
     label: 'Features'
@@ -56,30 +55,27 @@ fields:
 ```
 
 ### 2. Zugehöriges Fluid-Template (`Frontend.html`)
-Bilder werden als File-Referenzen übergeben (Nutzung mit `<f:image>`). Collections werden als Array übergeben und mit `<f:for>` iteriert.
+Bilder werden als File-Referenzen übergeben und mit `<f:image>` ausgegeben. Collections werden als Array übergeben und mit `<f:for>` iteriert.
 
 ```html
 <html xmlns:f="http://typo3.org" data-namespace-typo3-fluid="true">
 <div class="ce-feature-list">
     <h2>{header}</h2>
 
-    <!-- 1. Bild-Ausgabe (Asset) -->
     <f:if condition="{mainImage.0}">
         <div class="ce-feature-list__image">
             <f:image image="{mainImage.0}" maxWidth="800" alt="{mainImage.0.alternative}" />
         </div>
     </f:if>
 
-    <!-- 2. Verschachtelung-Ausgabe (Collection) -->
     <f:if condition="{features}">
         <ul class="ce-feature-list__items">
             <f:for each="{features}" as="feature">
                 <li class="ce-feature-list__item">
-                    <!-- Icon innerhalb der Collection -->
                     <f:if condition="{feature.itemIcon.0}">
                         <f:image image="{feature.itemIcon.0}" maxWidth="40" alt="" />
                     </f:if>
-                    
+
                     <h3>{feature.subTitle}</h3>
                     <p>{feature.description}</p>
                 </li>
@@ -89,3 +85,15 @@ Bilder werden als File-Referenzen übergeben (Nutzung mit `<f:image>`). Collecti
 </div>
 </html>
 ```
+
+## Hinweise zur Ausgabe
+- Standardmäßig nur das Nötige liefern
+- Keine erklärenden AI-Kommentare im Beispielcode
+- Kommentare nur bei nicht offensichtlicher oder komplexer Logik
+- TSDoc/PHPDoc nur bei öffentlichen APIs, Helpern mit Vertrag oder erklärungsbedürftigen Parametern und Rückgaben
+
+## Qualitätskriterien
+- Semantisch, barrierefrei und wiederverwendbar
+- Kleine, klare Komponenten statt Monolithen
+- Konsistente Benennung und Struktur
+- Direkt im Projekt einsetzbar
