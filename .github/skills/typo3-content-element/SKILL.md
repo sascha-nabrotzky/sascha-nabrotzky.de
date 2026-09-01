@@ -1,99 +1,89 @@
 ---
 name: TYPO3 v14 Content Blocks Generator
-description: Erstellt strukturierte Inhaltselemente auf Basis der modernen Content Blocks Extension inklusive Assets und Collections.
+description: Strenge Arbeitsanweisung für TYPO3-v14-Content-Blocks mit deklarativen YAML-Definitionen, sauberer Fluid-Ausgabe und minimalem, praxisnahem Code.
 ---
 
 # TYPO3 v14 Content Blocks Generator
 
-Nutze diesen Skill, wenn ein neues Inhaltselement oder ein neues Feld angelegt werden soll. Arbeite dabei ausnahmslos mit dem deklarativen YAML-Ansatz.
+Nutze diesen Skill ausschließlich, wenn ein neues Inhaltselement oder ein neues Feld für TYPO3 v14 angelegt oder angepasst werden soll. Arbeite konsequent deklarativ mit Content Blocks YAML.
+
+## Verbindliche Leitplanken
+- TYPO3 v14 zuerst denken: keine Legacy-Patterns, keine alten TCA-Ansätze, keine veralteten TypoScript-Strukturen.
+- Nur Content Blocks YAML für Definitionen verwenden.
+- Kein unnötiger Text, keine Erklärungen im Output.
+- Kommentare im Code nur bei nicht offensichtlicher oder komplexer Logik.
+- TSDoc/PHPDoc nur bei öffentlichen APIs, wiederverwendbaren Helpern oder erklärungsbedürftigen Parametern und Rückgaben.
+- Ausgaben standardmäßig escaped halten.
+- Unescaped-Ausgabe nur bei explizit vertrauenswürdigem Inhalt.
 
 ## Verzeichnisstruktur eines Elements
-Jedes Element liegt unter `Build/Extensions/sitepackage/ContentBlocks/ContentElements/[element-name]/` und benötigt:
+Jedes Element liegt unter `Build/Extensions/sitepackage/ContentBlocks/ContentElements/[element-name]/` und benötigt mindestens:
 1. `config.yaml` als zentrale Konfiguration
 2. `Source/Private/Templates/Frontend.html` als Fluid-Template
 3. `Source/Private/Language/Labels.xlf` für Übersetzungen
 
 ## YAML-Konventionsregeln (`config.yaml`)
 - **Name:** immer im Format `vendor/element-name`
-- **Standard-Felder wiederverwenden:** `header` standardmäßig mit `useExistingField: true`
-- **Feld-Mapping:** Snake-Case-Identifiers wie `teaser_image` werden im Fluid-Template zu Camel-Case wie `teaserImage`
-- **Struktur:** Felder klar gruppieren und nur die Optionen setzen, die das Element wirklich braucht
+- **Header wiederverwenden:** `header` standardmäßig mit `useExistingField: true`
+- **Identifier:** technisch sauber, klein, snake_case
+- **Feldgruppen:** logisch anordnen, keine unnötigen Felder
+- **Assets:** immer mit sinnvollen Restriktionen definieren
+- **Collections:** nur einsetzen, wenn wiederholbare Inhalte wirklich benötigt werden
+- **Vorlagen:** keine Optionen angeben, die funktional keinen Nutzen haben
 
-## Code-Schablonen (Boilerplates)
+## Template-Regeln
+- Fluid-Markup semantisch und barrierearm aufbauen.
+- Partials standardmäßig mit `f:render` einbinden.
+- Asset-URLs im Sitepackage über `f:uri.resource` erzeugen.
+- Bilder mit `f:image` ausgeben.
+- Collections mit `f:for` iterieren.
+- Nur notwendige Conditions verwenden, nicht verschachteln ohne Grund.
+- Keine Inline-Styles.
 
-### 1. Erweiterte `config.yaml` mit Asset und Collection
-```yaml
-name: saschanabrotzky/feature-list
-title: 'Feature Liste'
-description: 'Ein Element mit Hauptbild und einer Liste von Vorteilen'
-icon: 'content-boot-icon'
-basics:
-  - TYPO3/Appearance
-fields:
-  - identifier: header
-    useExistingField: true
+## A11y- und Interaktionsregeln
+- Semantische HTML5-Elemente bevorzugen.
+- Keyboard-Bedienung sicherstellen.
+- Fokuszustände sichtbar halten.
+- ARIA nur verwenden, wenn semantisches HTML nicht ausreicht.
+- JavaScript nur als progressive Enhancement einsetzen.
+- Nur Vanilla JS, keine Frameworks, kein jQuery.
 
-  - identifier: main_image
-    type: Asset
-    label: 'Hauptbild'
-    maxitems: 1
-    allowedFileExtensions: 'jpg,jpeg,png,svg,webp'
+## TYPO3-v14-Architektur
+- Content Elements v14-konform und deklarativ aufbauen.
+- TCA nur dort anfassen, wo es für die v14-Integration wirklich nötig ist.
+- TypoScript nach aktuellen v14-Pfad- und Setup-Konventionen strukturieren.
+- Keine Provisorien, keine Migrationskompatibilität zu älteren Versionen innerhalb des Skills.
 
-  - identifier: features
-    type: Collection
-    label: 'Features'
-    itemTitle: 'Vorteil'
-    fields:
-      - identifier: sub_title
-        type: Text
-        max: 80
-      - identifier: description
-        type: Textarea
-      - identifier: item_icon
-        type: Asset
-        maxitems: 1
-```
+## Standard-Ausgabeformat
+Wenn Code erzeugt wird, liefere standardmäßig:
+1. **Fluid-Markup**
+2. **CSS-Snippet**
 
-### 2. Zugehöriges Fluid-Template (`Frontend.html`)
-Bilder werden als File-Referenzen übergeben und mit `<f:image>` ausgegeben. Collections werden als Array übergeben und mit `<f:for>` iteriert.
+Zusätzlich nur wenn erforderlich:
+- **JavaScript** bei Interaktion
+- **TypoScript-Setup + TCA** bei neuem Content Element
+- **TSconfig** nur bei Backend-Integration
 
-```html
-<html xmlns:f="http://typo3.org" data-namespace-typo3-fluid="true">
-<div class="ce-feature-list">
-    <h2>{header}</h2>
+## Boilerplate-Vorgaben
+### YAML
+- Immer ein vollständiges, direkt nutzbares Beispiel liefern.
+- Beispielnamen konsistent und TYPO3-nah wählen.
+- Felder so definieren, dass das Template ohne zusätzliche Annahmen funktioniert.
 
-    <f:if condition="{mainImage.0}">
-        <div class="ce-feature-list__image">
-            <f:image image="{mainImage.0}" maxWidth="800" alt="{mainImage.0.alternative}" />
-        </div>
-    </f:if>
+### Fluid
+- Struktur direkt renderbar halten.
+- Keine Demo-Kommentare im Markup.
+- Verschachtelung nur, wenn sie den Aufbau wirklich abbildet.
 
-    <f:if condition="{features}">
-        <ul class="ce-feature-list__items">
-            <f:for each="{features}" as="feature">
-                <li class="ce-feature-list__item">
-                    <f:if condition="{feature.itemIcon.0}">
-                        <f:image image="{feature.itemIcon.0}" maxWidth="40" alt="" />
-                    </f:if>
-
-                    <h3>{feature.subTitle}</h3>
-                    <p>{feature.description}</p>
-                </li>
-            </f:for>
-        </ul>
-    </f:if>
-</div>
-</html>
-```
-
-## Hinweise zur Ausgabe
-- Standardmäßig nur das Nötige liefern
-- Keine erklärenden AI-Kommentare im Beispielcode
-- Kommentare nur bei nicht offensichtlicher oder komplexer Logik
-- TSDoc/PHPDoc nur bei öffentlichen APIs, Helpern mit Vertrag oder erklärungsbedürftigen Parametern und Rückgaben
+### CSS
+- Separat unter `Resources/Public/Css/` ablegen.
+- Komponentenorientiert strukturieren.
+- Design-Tokens über CSS Custom Properties definieren.
+- Keine Inline-Styles.
 
 ## Qualitätskriterien
 - Semantisch, barrierefrei und wiederverwendbar
 - Kleine, klare Komponenten statt Monolithen
 - Konsistente Benennung und Struktur
 - Direkt im Projekt einsetzbar
+- TYPO3 v14-konform ohne Umwege
