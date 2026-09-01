@@ -29,7 +29,7 @@ Implementiere TYPO3-v14-konformen, direkt nutzbaren Code für Frontend/UI-Protot
 - Asset-URLs über `f:uri.resource` aus dem Sitepackage erzeugen.
 
 ## CSS-Regeln
-- CSS in separaten Dateien unter `Resources/Public/Css/`.
+- CSS in separaten Dateien unter `packages/site_package/Resources/Public/Css/`.
 - Struktur klar und komponentenorientiert (z. B. BEM).
 - Design-Tokens über CSS Custom Properties (Farben, Spacing, Typografie).
 - Keine Inline-Styles.
@@ -40,7 +40,7 @@ Implementiere TYPO3-v14-konformen, direkt nutzbaren Code für Frontend/UI-Protot
 
 ## TYPO3-v14-Architektur
 - Content Elements v14-konform mit DataProcessor-Architektur.
-- TCA sauber in `Configuration/TCA/Overrides/tt_content.php` nach v14-API registrieren.
+- TCA sauber in `packages/site_package/Configuration/TCA/Overrides/tt_content.php` nach v14-API registrieren.
 - TypoScript nach aktuellen v14-Pfad-/Setup-Konventionen.
 
 ## Ausgabeformat (Standard)
