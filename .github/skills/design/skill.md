@@ -5,35 +5,28 @@ description: TYPO3-v14 Sitepackage Design-System für Farben, Spacing und Typogr
 
 ## Zweck
 
-Dieses Skill beschreibt das bestehende kleine Design-System im Sitepackage und dient als Referenz für konsistente UI- und Frontend-Arbeit.
+Referenz für konsistente UI- und Frontend-Arbeit im Sitepackage.
 
-## Regeln für die Umsetzung
+## Regeln
 
-- Immer die vorhandenen CSS-Variablen nutzen, keine neuen Hardcoded-Werte einführen, wenn ein Token bereits existiert. Unter packages/site_package/Resources/Public/Css/ liegen Tokens und Custom Properties für Color, Typography und Spacing.
-- Semantische Tokens bevorzugen, z. B. `--color-call-to-action` statt direkt `--color-orange`.
-- Spacing ausschließlich über Token oder bestehende TYPO3-Klassen abbilden.
-- Typografie über die bestehenden Font-, Size- und Line-Height-Tokens steuern.
-- Neue Komponenten so bauen, dass sie mit den vorhandenen Variablen skalieren.
+- Vorhandene CSS-Variablen nutzen, keine neuen Hardcoded-Werte einführen, wenn ein Token existiert.
+- Semantische Tokens bevorzugen.
+- Spacing über Tokens oder bestehende TYPO3-Klassen abbilden.
+- Typografie über die vorhandenen Font-, Size- und Line-Height-Tokens steuern.
+- Komponenten so bauen, dass sie mit den vorhandenen Variablen skalieren.
 - Keine CSS-Frameworks, keine Utility-Explosion, keine inline styles.
 
-## Anwendungsrichtlinien
+## Anwendung
 
-### UI-Komponenten
-- Buttons, Links, Hinweise und Formulare an den vorhandenen Farb- und Button-Tokens ausrichten.
-- Fokuszustände immer sichtbar und kontrastreich gestalten.
-- Lesbarkeit und Hierarchie über `font-size`, `line-height` und Abstände sauber abstufen.
-
-### Inhaltselemente
-- Überschriften an die bestehende Typografie-Skala koppeln.
-- Fließtext mit der Basis-Typografie und den vorhandenen Abständen gestalten.
+- Buttons, Links, Hinweise und Formulare an vorhandenen Farb- und Button-Tokens ausrichten.
+- Fokuszustände sichtbar und kontrastreich halten.
+- Überschriften an die Typografie-Skala koppeln.
+- Fließtext mit Basis-Typografie und vorhandenen Abständen gestalten.
 - Bildunterschriften, Muted Text und Zentrierung über vorhandene Hilfsklassen umsetzen.
-
-## Umsetzungshinweise für TYPO3 v14
-
-- Design-Tokens gehören in die global geladenen CSS-Dateien des Sitepackages.
-- Neue Komponenten müssen sich in die bestehende Layer-Struktur einfügen.
-- TYPO3-Content-Abstände über die vorhandenen `frame-space-*` Klassen respektieren.
-- Ausgabe soll modular, barrierearm und wartbar bleiben.
+- Design-Tokens in global geladenen CSS-Dateien ablegen.
+- Die bestehende Layer-Struktur respektieren.
+- `frame-space-*` Klassen für TYPO3-Content-Abstände respektieren.
+- Ausgabe modular, barrierearm und wartbar halten.
 
 ## Stil
 
