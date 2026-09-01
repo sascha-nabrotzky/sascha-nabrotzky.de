@@ -1,35 +1,60 @@
-# GitHub Copilot Anweisungen für TYPO3 v14 Prototyping
+# Copilot-Anweisungen (TYPO3 v14 Sitepackage)
 
-## Projekt-Kontext
-- **System:** TYPO3 CMS v14 (aktuelle Core-Architektur).
-- **Fokus:** Front-End Design, UI-Prototyping, Sitepackage-Entwicklung.
-- **Ziel:** Erstellung modularer, barrierefreier und nativer Fluid-Komponenten ohne CSS-Frameworks.
+## Ziel
+Implementiere TYPO3-v14-konformen, direkt nutzbaren Code für Frontend/UI-Prototyping im Sitepackage: modular, barrierefrei, wartbar, ohne unnötige Erklärtexte.
 
-## Technologie-Stack & Standards
-- **HTML/CSS:** Semantisches HTML5, modernes Vanilla CSS (CSS Grid, Flexbox, Custom Properties/Variablen).
-- **Keine Frameworks:** Verwende kein Tailwind CSS, Bootstrap oder jQuery.
-- **Template-Engine:** TYPO3 Fluid (Moderne ViewHelper, Strict Syntax, Partials und Layouts).
-- **JavaScript:** Natives JavaScript (ES6+ / Vanilla JS). Barrierefrei nach WCAG 2.1 (inklusive ARIA-Attribute).
-- **Konfiguration:** TYPO3 v14 TypoScript (neue Pfad- und Setup-Konventionen ohne Altlasten) und TSconfig.
+## Stack
+- TYPO3 CMS v14
+- Fluid Templates/Partials/Layouts
+- Semantisches HTML5
+- Modernes Vanilla CSS (Grid, Flexbox, Custom Properties)
+- Vanilla JavaScript (ES6+)
+- TypoScript + TSconfig nach v14-Konventionen
+- **Keine** CSS/JS-Frameworks (kein Tailwind, Bootstrap, jQuery)
 
-## Code-Richtlinien (Coding Standards)
+## Verbindliche Arbeitsregeln
+1. **Sprache:** Antworte immer auf Deutsch.
+2. **Output knapp halten:** Nur Ergebnis liefern, keine langen Erklärungen.
+3. **Kommentare im Code:**  
+   - Keine typischen AI-Erklärkommentare.  
+   - Kommentare nur bei komplexer, nicht offensichtlicher Logik.  
+   - TSDoc/PHPDoc nur bei öffentlichen APIs, Helpern mit Vertrag oder erklärungsbedürftigen Parametern/Returns.
+4. **Bei fehlenden Details:** Sinnvolle Annahmen treffen und umsetzen; nur bei echten Blockern Rückfragen stellen.
+5. **Keine Legacy-Patterns:** Nur moderne TYPO3-v14-Ansätze.
 
-### 1. TYPO3 Fluid Templates
-- Alle HTML-Strukturen müssen in TYPO3 Fluid geschrieben werden.
-- Nutze standardmäßig `f:render` für Partials (`<f:render partial="Header" arguments="{_all}" />`).
-- Beachte die TYPO3 v14 Fluid-Standards: Maskiere Ausgaben konsequent gegen XSS (z. B. via `f:format.html` oder Inline-Casting).
-- Verwende für Asset-Pfade (CSS, JS, Bilder) immer den `f:uri.resource`-ViewHelper bezogen auf das Sitepackage.
+## Fluid/Template-Regeln
+- HTML-Strukturen als Fluid umsetzen.
+- Partials standardmäßig mit `f:render` einbinden.
+- Ausgaben standardmäßig escaped behandeln; unescaped/`f:format.html` nur bei vertrauenswürdigem Inhalt.
+- Asset-URLs über `f:uri.resource` aus dem Sitepackage erzeugen.
 
-### 2. Styling (Modern Vanilla CSS)
-- Schreibe sauberes, semantisches HTML mit logischen CSS-Klassen (z. B. nach BEM-Methodik, falls gewünscht).
-- CSS wird in separaten Stylesheets im Sitepackage (`Resources/Public/Css/`) organisiert, nicht inline und in einer Barrel-Datei importiert und dort nach @layer organisiert.
-- Nutze CSS Custom Properties für Farbthemen, Spacings und Schriftarten, um das Design wartbar zu halten.
+## CSS-Regeln
+- CSS in separaten Dateien unter `Resources/Public/Css/`.
+- Struktur klar und komponentenorientiert (z. B. BEM).
+- Design-Tokens über CSS Custom Properties (Farben, Spacing, Typografie).
+- Keine Inline-Styles.
 
-### 3. TYPO3 v14 Architektur & Sitepackages
-- Nutze für Inhaltselemente (Content Elements) die v14-konforme DataProcessor-Architektur.
-- Erzeuge TCA-Konfigurationen (`Configuration/TCA/Overrides/tt_content.php`) strikt nach v14-API-Vorgaben (z. B. korrekte Registrierung von Inhaltselementen).
+## JavaScript- & A11y-Regeln
+- Nur Vanilla JS, progressive Enhancement.
+- WCAG-2.1-konforme Interaktion (inkl. sinnvoller ARIA-Attribute, Keyboard-Nutzung, Fokuszustände).
 
-## Tonalität & Ausgabe
-- Antworte immer auf **Deutsch**.
-- Liefere direkt einsatzbereiten Code: Bei neuen Elementen immer das Fluid-Markup UND das passende CSS-Snippet trennen.
-- Wenn ein neues Inhaltselement erstellt wird, generiere zusätzlich das TypoScript-Setup und die TCA-Datei.
+## TYPO3-v14-Architektur
+- Content Elements v14-konform mit DataProcessor-Architektur.
+- TCA sauber in `Configuration/TCA/Overrides/tt_content.php` nach v14-API registrieren.
+- TypoScript nach aktuellen v14-Pfad-/Setup-Konventionen.
+
+## Ausgabeformat (Standard)
+Wenn Code erzeugt wird, liefere standardmäßig:
+1. **Fluid-Markup**
+2. **CSS-Snippet**
+
+Zusätzlich nur wenn erforderlich:
+- **JavaScript** (bei Interaktion)
+- **TypoScript-Setup + TCA** (immer bei neuem Content Element)
+- **TSconfig** (nur wenn für Backend-Integration nötig)
+
+## Qualitätskriterien
+- Semantisch, barrierefrei, wiederverwendbar
+- Kleine, klare Komponenten statt Monolithen
+- Konsistente Benennung und Struktur
+- Direkt im Projekt einsetzbar
