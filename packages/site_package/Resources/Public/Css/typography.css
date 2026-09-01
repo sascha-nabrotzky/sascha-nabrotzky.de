@@ -72,7 +72,7 @@ h6 {
 }
 
 h1 {
-    margin: 0 0 3rem 0;
+    margin: 0 0 var(--spacing-md) 0;
     font-size: var(--fs-5xl);
     line-height: 1.05;
     letter-spacing: -0.07rem;
@@ -82,34 +82,34 @@ h1 {
     }
 
     + h2 {
-        margin-bottom: 1rem;
+        margin-bottom: var(--spacing-xs);
     }
 }
 
 h2 {
-    margin: 0 0 2rem 0;
+    margin: 0 0 var(--spacing-sm) 0;
     line-height: 1.1;
     font-size: var(--fs-4xl);
 
     @media (width <= 640px) {
         font-size: var(--fs-3xl);
-        margin-bottom: 1rem;
+        margin-bottom: var(--spacing-xs);
     }
 }
 
 h3 {
-    margin: 3rem 0 2rem 0;
+    margin: var(--spacing-md) 0 var(--spacing-sm) 0;
     line-height: 1.2;
     font-size: var(--fs-3xl);
 
     @media (width <= 640px) {
         font-size: var(--fs-2xl);
-        margin: 2rem 0 0.5rem 0;
+        margin: var(--spacing-sm) 0 0.5rem 0;
     }
 }
 
 h4 {
-    margin: 0 0 1rem 0;
+    margin: 0 0 var(--spacing-xs) 0;
     font-size: var(--fs-2xl);
 
     @media (width <= 640px) {
@@ -118,7 +118,7 @@ h4 {
 }
 
 h5 {
-    margin: 0 0 1rem 0;
+    margin: 0 0 var(--spacing-xs) 0;
     font-size: var(--fs-xl);
 
     @media (width <= 640px) {
@@ -127,7 +127,7 @@ h5 {
 }
 
 h6 {
-    margin: 0 0 1rem 0;
+    margin: 0 0 var(--spacing-xs) 0;
     font-size: var(--fs-lg);
 
     @media (width <= 640px) {
@@ -155,5 +155,5 @@ small {
 }
 
 figure:has(figcaption) {
-    margin-bottom: 2rem !important;
+    margin-bottom: var(--spacing-sm) !important;
 }
