@@ -158,3 +158,8 @@ small {
 figure:has(figcaption) {
     margin-bottom: var(--spacing-sm) !important;
 }
+
+/* Tables */
+td {
+    font-feature-settings: 'tnum';
+}
