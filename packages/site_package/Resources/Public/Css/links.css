@@ -23,4 +23,6 @@ nav {
     background-color: var(--color-orange);
     padding: 0.5rem 2rem;
     text-decoration: none;
+    color: var(--color-black);
+    font-weight: 500;
 }

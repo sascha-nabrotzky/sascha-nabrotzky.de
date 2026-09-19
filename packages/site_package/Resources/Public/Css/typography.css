@@ -72,7 +72,7 @@ h6 {
 }
 
 h1 {
-    margin: 0 0 var(--spacing-md) 0;
+    margin-block: 0 var(--spacing-md);
     font-size: var(--fs-5xl);
     line-height: 1.05;
     letter-spacing: -0.07rem;
@@ -87,7 +87,7 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 var(--spacing-sm) 0;
+    margin-block: 0 var(--spacing-sm);
     line-height: 1.1;
     font-size: var(--fs-4xl);
 
@@ -98,18 +98,22 @@ h2 {
 }
 
 h3 {
-    margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+    margin-block: 0 var(--spacing-sm);
     line-height: 1.2;
     font-size: var(--fs-3xl);
 
+    &:has(~ *) {
+        margin-top: var(--spacing-sm);
+    }
+
     @media (width <= 640px) {
         font-size: var(--fs-2xl);
-        margin: var(--spacing-sm) 0 0.5rem 0;
+        margin-block: var(--spacing-sm) 0.5rem;
     }
 }
 
 h4 {
-    margin: 0 0 var(--spacing-xs) 0;
+    margin-block: 0 var(--spacing-xs);
     font-size: var(--fs-2xl);
 
     @media (width <= 640px) {
@@ -118,7 +122,7 @@ h4 {
 }
 
 h5 {
-    margin: 0 0 var(--spacing-xs) 0;
+    margin-block: 0 var(--spacing-xs);
     font-size: var(--fs-xl);
 
     @media (width <= 640px) {
@@ -127,7 +131,7 @@ h5 {
 }
 
 h6 {
-    margin: 0 0 var(--spacing-xs) 0;
+    margin-block: 0 var(--spacing-xs);
     font-size: var(--fs-lg);
 
     @media (width <= 640px) {

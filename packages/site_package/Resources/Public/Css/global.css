@@ -41,10 +41,14 @@ body {
     @media (width >= 1440px) {
         background-position: top right;
     }
-    
+
     @media (prefers-color-scheme: dark) {
         background-color: var(--color-black);
         color: var(--color-white);
+
+        table thead tr th {
+            border-color: var(--color-white);
+        }
     }
 }
 
@@ -60,7 +64,15 @@ body {
 }
 
 figure {
-    margin: 1rem 0;
+    margin: 0;
+
+    &:has(~ *) {
+        margin-top: 1rem;
+    }
+
+    &.table {
+        margin-bottom: 1rem;
+    }
 
     img {
         width: 100%;
@@ -70,5 +82,18 @@ figure {
         @media (width <= 800px) {
             width: 100%;
         }
+    }
+}
+
+table {
+    thead {
+        text-align: left;
+
+        tr th {
+            border-bottom: 1px solid var(--color-black);
+        }
+    }
+    tbody tr td:first-of-type {
+        padding-right: 1rem;
     }
 }
